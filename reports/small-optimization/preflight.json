@@ -1,0 +1,26 @@
+{
+  "assertions": 4608,
+  "settings": {
+    "small": {
+      "exactPrecision": 68,
+      "divPrecision": 32,
+      "sqrtPrecision": 36,
+      "chainPrecision": 44,
+      "guardDigits": 10
+    },
+    "boundary": {
+      "exactPrecision": 80,
+      "divPrecision": 33,
+      "sqrtPrecision": 38,
+      "chainPrecision": 48,
+      "guardDigits": 10
+    },
+    "30-digit": {
+      "exactPrecision": 122,
+      "divPrecision": 32,
+      "sqrtPrecision": 45,
+      "chainPrecision": 62,
+      "guardDigits": 10
+    }
+  }
+}

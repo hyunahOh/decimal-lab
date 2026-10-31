@@ -6,13 +6,19 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:upstream": "node scripts/test-upstream.mjs",
     "typecheck": "tsc --noEmit",
-    "bench": "vitest bench --run"
+    "bench": "vitest bench --run",
+    "bench:compare": "node scripts/bench-compare.mjs",
+    "bench:three": "node scripts/bench-three-way.mjs"
   },
   "engines": {
     "node": ">=22"
   },
   "devDependencies": {
+    "@types/big.js": "6.2.2",
+    "big.js": "7.0.1",
+    "decimal.js": "10.6.0",
     "typescript": "~5.9.3",
     "vitest": "~3.2.4"
   }

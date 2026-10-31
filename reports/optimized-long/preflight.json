@@ -1,0 +1,728 @@
+{
+  "assertions": 7168,
+  "settings": {
+    "small-6-digit": {
+      "exactPrecision": 50,
+      "divPrecision": 31,
+      "sqrtPrecision": 32,
+      "chainPrecision": 36,
+      "guardDigits": 10
+    },
+    "small": {
+      "exactPrecision": 68,
+      "divPrecision": 32,
+      "sqrtPrecision": 36,
+      "chainPrecision": 44,
+      "guardDigits": 10
+    },
+    "small-promotion": {
+      "exactPrecision": 77,
+      "divPrecision": 31,
+      "sqrtPrecision": 37,
+      "chainPrecision": 45,
+      "guardDigits": 10
+    },
+    "boundary": {
+      "exactPrecision": 80,
+      "divPrecision": 33,
+      "sqrtPrecision": 38,
+      "chainPrecision": 48,
+      "guardDigits": 10
+    },
+    "30-digit": {
+      "exactPrecision": 122,
+      "divPrecision": 32,
+      "sqrtPrecision": 45,
+      "chainPrecision": 62,
+      "guardDigits": 10
+    },
+    "100-digit": {
+      "exactPrecision": 332,
+      "divPrecision": 32,
+      "sqrtPrecision": 80,
+      "chainPrecision": 132,
+      "guardDigits": 10
+    },
+    "1000-digit": {
+      "exactPrecision": 3032,
+      "divPrecision": 32,
+      "sqrtPrecision": 530,
+      "chainPrecision": 1032,
+      "guardDigits": 10
+    }
+  },
+  "representations": {
+    "small-6-digit": {
+      "inputs": {
+        "a": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "b": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "times": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "small": {
+      "inputs": {
+        "a": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "b": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "times": {
+          "small": 16,
+          "big": 16,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 8,
+          "big": 24,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "small-promotion": {
+      "inputs": {
+        "a": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "b": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "times": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "boundary": {
+      "inputs": {
+        "a": {
+          "small": 16,
+          "big": 16,
+          "scalar": 0
+        },
+        "b": {
+          "small": 18,
+          "big": 14,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 16,
+          "big": 16,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 2,
+          "big": 30,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 6,
+          "big": 26,
+          "scalar": 0
+        },
+        "times": {
+          "small": 2,
+          "big": 30,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 18,
+          "big": 14,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 8,
+          "big": 24,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 24,
+          "big": 8,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "30-digit": {
+      "inputs": {
+        "a": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "b": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "times": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "100-digit": {
+      "inputs": {
+        "a": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "b": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "times": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    },
+    "1000-digit": {
+      "inputs": {
+        "a": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "b": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        }
+      },
+      "results": {
+        "construct": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "plus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "minus": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "times": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "div": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "mod": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "sqrt": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "pow3": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "round2": {
+          "small": 0,
+          "big": 32,
+          "scalar": 0
+        },
+        "prec10": {
+          "small": 32,
+          "big": 0,
+          "scalar": 0
+        },
+        "cmp": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toString": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toFixed2": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toPrecision10": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "toExponential8": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        },
+        "endToEnd": {
+          "small": 0,
+          "big": 0,
+          "scalar": 32
+        }
+      }
+    }
+  }
+}

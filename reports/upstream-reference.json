@@ -1,0 +1,128 @@
+{
+  "implementation": "big.js 7.0.1",
+  "upstreamCommit": "e19cc83cb965bdef18cb31423d81f60140c9e7be",
+  "passed": 47456,
+  "total": 47456,
+  "abortedSuites": 0,
+  "results": [
+    {
+      "method": "abs",
+      "passed": 486,
+      "total": 486,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "cmp",
+      "passed": 23943,
+      "total": 23943,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "div",
+      "passed": 5027,
+      "total": 5027,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "minus",
+      "passed": 1723,
+      "total": 1723,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "mod",
+      "passed": 1756,
+      "total": 1756,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "neg",
+      "passed": 12,
+      "total": 12,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "plus",
+      "passed": 1845,
+      "total": 1845,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "pow",
+      "passed": 1026,
+      "total": 1026,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "prec",
+      "passed": 277,
+      "total": 277,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "round",
+      "passed": 5200,
+      "total": 5200,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "sqrt",
+      "passed": 1236,
+      "total": 1236,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "times",
+      "passed": 2087,
+      "total": 2087,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "toExponential",
+      "passed": 395,
+      "total": 395,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "toFixed",
+      "passed": 941,
+      "total": 941,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "toNumber",
+      "passed": 65,
+      "total": 65,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "toPrecision",
+      "passed": 425,
+      "total": 425,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "method": "toString",
+      "passed": 1012,
+      "total": 1012,
+      "failed": 0,
+      "failures": []
+    }
+  ]
+}

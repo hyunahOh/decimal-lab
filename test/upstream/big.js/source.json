@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/MikeMcl/big.js",
+  "tag": "v7.0.1",
+  "commit": "e19cc83cb965bdef18cb31423d81f60140c9e7be",
+  "files": "test/test.js, test/runner.js, test/methods/*.js (unmodified)",
+  "license": "LICENCE.md"
+}

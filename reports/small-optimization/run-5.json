@@ -1,0 +1,1301 @@
+{
+  "startedAt": "2026-10-31T12:34:31.877Z",
+  "rows": [
+    {
+      "group": "small",
+      "operation": "construct",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 533.7991486922555,
+          "elapsedNs": 251440751,
+          "operations": 471040
+        },
+        "decimal-lab": {
+          "nsPerOp": 141.0494015194954,
+          "elapsedNs": 251893920,
+          "operations": 1785856
+        },
+        "big.js": {
+          "nsPerOp": 157.3155435778431,
+          "elapsedNs": 250013413,
+          "operations": 1589248
+        },
+        "decimal.js": {
+          "nsPerOp": 276.22632715723535,
+          "elapsedNs": 251175914,
+          "operations": 909312
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "plus",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 59.01010061410757,
+          "elapsedNs": 251373587,
+          "operations": 4259840
+        },
+        "big.js": {
+          "nsPerOp": 88.02305795954562,
+          "elapsedNs": 250937542,
+          "operations": 2850816
+        },
+        "decimal.js": {
+          "nsPerOp": 153.01546325683594,
+          "elapsedNs": 250700535,
+          "operations": 1638400
+        },
+        "before": {
+          "nsPerOp": 530.1761937634699,
+          "elapsedNs": 251905796,
+          "operations": 475136
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "minus",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 91.60035741896857,
+          "elapsedNs": 252131083,
+          "operations": 2752512
+        },
+        "decimal.js": {
+          "nsPerOp": 153.7134539794922,
+          "elapsedNs": 251844123,
+          "operations": 1638400
+        },
+        "before": {
+          "nsPerOp": 971.9036109561011,
+          "elapsedNs": 250797783,
+          "operations": 258048
+        },
+        "decimal-lab": {
+          "nsPerOp": 67.94592636243432,
+          "elapsedNs": 251589089,
+          "operations": 3702784
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "times",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 225.99721482220818,
+          "elapsedNs": 251786209,
+          "operations": 1114112
+        },
+        "before": {
+          "nsPerOp": 521.4695465605138,
+          "elapsedNs": 252040833,
+          "operations": 483328
+        },
+        "decimal-lab": {
+          "nsPerOp": 92.77284038497741,
+          "elapsedNs": 252318376,
+          "operations": 2719744
+        },
+        "big.js": {
+          "nsPerOp": 193.14966201782227,
+          "elapsedNs": 253165125,
+          "operations": 1310720
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "div",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 741.1419339467244,
+          "elapsedNs": 251964541,
+          "operations": 339968
+        },
+        "decimal-lab": {
+          "nsPerOp": 213.15694257948132,
+          "elapsedNs": 251450161,
+          "operations": 1179648
+        },
+        "big.js": {
+          "nsPerOp": 4054.1696151859505,
+          "elapsedNs": 251163916,
+          "operations": 61952
+        },
+        "decimal.js": {
+          "nsPerOp": 1630.03255859375,
+          "elapsedNs": 250373001,
+          "operations": 153600
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "mod",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 168.8492874313187,
+          "elapsedNs": 251744832,
+          "operations": 1490944
+        },
+        "big.js": {
+          "nsPerOp": 288.7209956331073,
+          "elapsedNs": 250711454,
+          "operations": 868352
+        },
+        "decimal.js": {
+          "nsPerOp": 740.8274572900979,
+          "elapsedNs": 251857629,
+          "operations": 339968
+        },
+        "before": {
+          "nsPerOp": 1215.9307124071781,
+          "elapsedNs": 251512836,
+          "operations": 206848
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "sqrt",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 36886.20489386792,
+          "elapsedNs": 250236014,
+          "operations": 6784
+        },
+        "decimal.js": {
+          "nsPerOp": 11792.347420933735,
+          "elapsedNs": 250563798,
+          "operations": 21248
+        },
+        "before": {
+          "nsPerOp": 1545.5693668413767,
+          "elapsedNs": 250060759,
+          "operations": 161792
+        },
+        "decimal-lab": {
+          "nsPerOp": 1265.5729854623066,
+          "elapsedNs": 251413667,
+          "operations": 198656
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "pow3",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 902.9660716337316,
+          "elapsedNs": 251501334,
+          "operations": 278528
+        },
+        "before": {
+          "nsPerOp": 1848.5924797344924,
+          "elapsedNs": 251763507,
+          "operations": 136192
+        },
+        "decimal-lab": {
+          "nsPerOp": 864.9612951144367,
+          "elapsedNs": 251544584,
+          "operations": 290816
+        },
+        "big.js": {
+          "nsPerOp": 692.3396105819874,
+          "elapsedNs": 252388251,
+          "operations": 364544
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "round2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 266.6743206521739,
+          "elapsedNs": 251228544,
+          "operations": 942080
+        },
+        "decimal-lab": {
+          "nsPerOp": 77.06853539052636,
+          "elapsedNs": 250012795,
+          "operations": 3244032
+        },
+        "big.js": {
+          "nsPerOp": 59.93121862411499,
+          "elapsedNs": 251369750,
+          "operations": 4194304
+        },
+        "decimal.js": {
+          "nsPerOp": 208.88347151472763,
+          "elapsedNs": 253253663,
+          "operations": 1212416
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "prec10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 69.05231015317075,
+          "elapsedNs": 251160377,
+          "operations": 3637248
+        },
+        "big.js": {
+          "nsPerOp": 38.047898547484145,
+          "elapsedNs": 251844215,
+          "operations": 6619136
+        },
+        "decimal.js": {
+          "nsPerOp": 186.26350588914823,
+          "elapsedNs": 250242785,
+          "operations": 1343488
+        },
+        "before": {
+          "nsPerOp": 303.8800000483447,
+          "elapsedNs": 251427881,
+          "operations": 827392
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "cmp",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 22.5806032966165,
+          "elapsedNs": 251573211,
+          "operations": 11141120
+        },
+        "decimal.js": {
+          "nsPerOp": 66.99633414285225,
+          "elapsedNs": 250268290,
+          "operations": 3735552
+        },
+        "before": {
+          "nsPerOp": 273.3513150896345,
+          "elapsedNs": 250800925,
+          "operations": 917504
+        },
+        "decimal-lab": {
+          "nsPerOp": 14.341127381288915,
+          "elapsedNs": 250002793,
+          "operations": 17432576
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "toString",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 67.78955564245713,
+          "elapsedNs": 251010082,
+          "operations": 3702784
+        },
+        "before": {
+          "nsPerOp": 157.3442804395538,
+          "elapsedNs": 250059083,
+          "operations": 1589248
+        },
+        "decimal-lab": {
+          "nsPerOp": 58.28696464769768,
+          "elapsedNs": 252113038,
+          "operations": 4325376
+        },
+        "big.js": {
+          "nsPerOp": 132.09329539331895,
+          "elapsedNs": 251049120,
+          "operations": 1900544
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "toFixed2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 226.77701882755056,
+          "elapsedNs": 252654998,
+          "operations": 1114112
+        },
+        "decimal-lab": {
+          "nsPerOp": 140.7336296991471,
+          "elapsedNs": 251329997,
+          "operations": 1785856
+        },
+        "big.js": {
+          "nsPerOp": 189.05655170958718,
+          "elapsedNs": 250897706,
+          "operations": 1327104
+        },
+        "decimal.js": {
+          "nsPerOp": 263.7285272006331,
+          "elapsedNs": 250613835,
+          "operations": 950272
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "toPrecision10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 141.7398805971499,
+          "elapsedNs": 250804750,
+          "operations": 1769472
+        },
+        "big.js": {
+          "nsPerOp": 210.93153694884418,
+          "elapsedNs": 252280868,
+          "operations": 1196032
+        },
+        "decimal.js": {
+          "nsPerOp": 281.26217231400517,
+          "elapsedNs": 251146869,
+          "operations": 892928
+        },
+        "before": {
+          "nsPerOp": 503.4281446112961,
+          "elapsedNs": 251569085,
+          "operations": 499712
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "toExponential8",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 199.61977158583605,
+          "elapsedNs": 251833916,
+          "operations": 1261568
+        },
+        "decimal.js": {
+          "nsPerOp": 263.2965045797414,
+          "elapsedNs": 250203296,
+          "operations": 950272
+        },
+        "before": {
+          "nsPerOp": 487.80394539000497,
+          "elapsedNs": 251753665,
+          "operations": 516096
+        },
+        "decimal-lab": {
+          "nsPerOp": 163.67892001537567,
+          "elapsedNs": 252081250,
+          "operations": 1540096
+        }
+      }
+    },
+    {
+      "group": "small",
+      "operation": "endToEnd",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 2138.016202445652,
+          "elapsedNs": 251772788,
+          "operations": 117760
+        },
+        "before": {
+          "nsPerOp": 3255.3249479166666,
+          "elapsedNs": 250008956,
+          "operations": 76800
+        },
+        "decimal-lab": {
+          "nsPerOp": 1080.4333344856195,
+          "elapsedNs": 250038204,
+          "operations": 231424
+        },
+        "big.js": {
+          "nsPerOp": 2563.3226521809897,
+          "elapsedNs": 251984870,
+          "operations": 98304
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "construct",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 737.788180064006,
+          "elapsedNs": 250824372,
+          "operations": 339968
+        },
+        "decimal-lab": {
+          "nsPerOp": 175.62716709882363,
+          "elapsedNs": 250340369,
+          "operations": 1425408
+        },
+        "big.js": {
+          "nsPerOp": 251.97835153048155,
+          "elapsedNs": 251833212,
+          "operations": 999424
+        },
+        "decimal.js": {
+          "nsPerOp": 374.78761105421114,
+          "elapsedNs": 251761329,
+          "operations": 671744
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "plus",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 146.94665996844952,
+          "elapsedNs": 250387704,
+          "operations": 1703936
+        },
+        "big.js": {
+          "nsPerOp": 180.38120332605698,
+          "elapsedNs": 251206079,
+          "operations": 1392640
+        },
+        "decimal.js": {
+          "nsPerOp": 241.24522876739502,
+          "elapsedNs": 252963957,
+          "operations": 1048576
+        },
+        "before": {
+          "nsPerOp": 629.4734943822488,
+          "elapsedNs": 250097373,
+          "operations": 397312
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "minus",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 183.03065926688058,
+          "elapsedNs": 251897043,
+          "operations": 1376256
+        },
+        "decimal.js": {
+          "nsPerOp": 238.51184272766113,
+          "elapsedNs": 250097794,
+          "operations": 1048576
+        },
+        "before": {
+          "nsPerOp": 1198.2782820159314,
+          "elapsedNs": 250315540,
+          "operations": 208896
+        },
+        "decimal-lab": {
+          "nsPerOp": 165.58693046980008,
+          "elapsedNs": 252306793,
+          "operations": 1523712
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "times",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 352.84208451194326,
+          "elapsedNs": 251471965,
+          "operations": 712704
+        },
+        "before": {
+          "nsPerOp": 599.0509870940564,
+          "elapsedNs": 250278710,
+          "operations": 417792
+        },
+        "decimal-lab": {
+          "nsPerOp": 87.80185041756465,
+          "elapsedNs": 250306920,
+          "operations": 2850816
+        },
+        "big.js": {
+          "nsPerOp": 529.7882185311153,
+          "elapsedNs": 251721455,
+          "operations": 475136
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "div",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 778.5541528629351,
+          "elapsedNs": 251927667,
+          "operations": 323584
+        },
+        "decimal-lab": {
+          "nsPerOp": 224.8399819766774,
+          "elapsedNs": 250496922,
+          "operations": 1114112
+        },
+        "big.js": {
+          "nsPerOp": 12541.432892628205,
+          "elapsedNs": 250427332,
+          "operations": 19968
+        },
+        "decimal.js": {
+          "nsPerOp": 1966.95278125,
+          "elapsedNs": 251769956,
+          "operations": 128000
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "mod",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 272.92210824149,
+          "elapsedNs": 250407126,
+          "operations": 917504
+        },
+        "big.js": {
+          "nsPerOp": 817.9421549479167,
+          "elapsedNs": 251271830,
+          "operations": 307200
+        },
+        "decimal.js": {
+          "nsPerOp": 1093.0409894670759,
+          "elapsedNs": 250717370,
+          "operations": 229376
+        },
+        "before": {
+          "nsPerOp": 1521.441177179784,
+          "elapsedNs": 252388834,
+          "operations": 165888
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "sqrt",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 55647.26408450704,
+          "elapsedNs": 252861168,
+          "operations": 4544
+        },
+        "decimal.js": {
+          "nsPerOp": 13648.968641493055,
+          "elapsedNs": 251577790,
+          "operations": 18432
+        },
+        "before": {
+          "nsPerOp": 1772.2987715126812,
+          "elapsedNs": 250447084,
+          "operations": 141312
+        },
+        "decimal-lab": {
+          "nsPerOp": 1454.039318266369,
+          "elapsedNs": 250141292,
+          "operations": 172032
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "pow3",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 1410.5121677442528,
+          "elapsedNs": 251319416,
+          "operations": 178176
+        },
+        "before": {
+          "nsPerOp": 2883.704400275735,
+          "elapsedNs": 250997631,
+          "operations": 87040
+        },
+        "decimal-lab": {
+          "nsPerOp": 904.9825882523148,
+          "elapsedNs": 250209586,
+          "operations": 276480
+        },
+        "big.js": {
+          "nsPerOp": 1660.682788745777,
+          "elapsedNs": 251679798,
+          "operations": 151552
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "round2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 358.7717398710029,
+          "elapsedNs": 252758996,
+          "operations": 704512
+        },
+        "decimal-lab": {
+          "nsPerOp": 123.0025244140625,
+          "elapsedNs": 251909170,
+          "operations": 2048000
+        },
+        "big.js": {
+          "nsPerOp": 102.73395060221354,
+          "elapsedNs": 252478957,
+          "operations": 2457600
+        },
+        "decimal.js": {
+          "nsPerOp": 241.52314472198486,
+          "elapsedNs": 253255373,
+          "operations": 1048576
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "prec10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 247.21694946289062,
+          "elapsedNs": 251124955,
+          "operations": 1015808
+        },
+        "big.js": {
+          "nsPerOp": 114.8473046146222,
+          "elapsedNs": 252142204,
+          "operations": 2195456
+        },
+        "decimal.js": {
+          "nsPerOp": 230.15830242100046,
+          "elapsedNs": 252651213,
+          "operations": 1097728
+        },
+        "before": {
+          "nsPerOp": 487.33794875372024,
+          "elapsedNs": 251513166,
+          "operations": 516096
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "cmp",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 65.16936117915783,
+          "elapsedNs": 251985416,
+          "operations": 3866624
+        },
+        "decimal.js": {
+          "nsPerOp": 112.1493729301121,
+          "elapsedNs": 253568835,
+          "operations": 2260992
+        },
+        "before": {
+          "nsPerOp": 312.8363672373246,
+          "elapsedNs": 251150041,
+          "operations": 802816
+        },
+        "decimal-lab": {
+          "nsPerOp": 57.59945223224697,
+          "elapsedNs": 252914126,
+          "operations": 4390912
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "toString",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 139.49760076349432,
+          "elapsedNs": 251408156,
+          "operations": 1802240
+        },
+        "before": {
+          "nsPerOp": 215.75011175451144,
+          "elapsedNs": 250974338,
+          "operations": 1163264
+        },
+        "decimal-lab": {
+          "nsPerOp": 93.49081830280583,
+          "elapsedNs": 251207585,
+          "operations": 2686976
+        },
+        "big.js": {
+          "nsPerOp": 158.76633854502256,
+          "elapsedNs": 252319086,
+          "operations": 1589248
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "toFixed2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 297.57206256573016,
+          "elapsedNs": 253521875,
+          "operations": 851968
+        },
+        "decimal-lab": {
+          "nsPerOp": 250.08302964621444,
+          "elapsedNs": 251987662,
+          "operations": 1007616
+        },
+        "big.js": {
+          "nsPerOp": 245.8286607530382,
+          "elapsedNs": 253742377,
+          "operations": 1032192
+        },
+        "decimal.js": {
+          "nsPerOp": 347.717172796076,
+          "elapsedNs": 250667919,
+          "operations": 720896
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "toPrecision10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 358.9502932526344,
+          "elapsedNs": 252884789,
+          "operations": 704512
+        },
+        "big.js": {
+          "nsPerOp": 226.29838202981387,
+          "elapsedNs": 252121743,
+          "operations": 1114112
+        },
+        "decimal.js": {
+          "nsPerOp": 345.68037603142557,
+          "elapsedNs": 252031414,
+          "operations": 729088
+        },
+        "before": {
+          "nsPerOp": 705.1372940238865,
+          "elapsedNs": 251277085,
+          "operations": 356352
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "toExponential8",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 220.96652134486607,
+          "elapsedNs": 253422084,
+          "operations": 1146880
+        },
+        "decimal.js": {
+          "nsPerOp": 338.2161905477335,
+          "elapsedNs": 252130700,
+          "operations": 745472
+        },
+        "before": {
+          "nsPerOp": 678.0016499613668,
+          "elapsedNs": 252715623,
+          "operations": 372736
+        },
+        "decimal-lab": {
+          "nsPerOp": 348.84551030939275,
+          "elapsedNs": 251481333,
+          "operations": 720896
+        }
+      }
+    },
+    {
+      "group": "boundary",
+      "operation": "endToEnd",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 2630.3094233030915,
+          "elapsedNs": 250489627,
+          "operations": 95232
+        },
+        "before": {
+          "nsPerOp": 3711.0996833570075,
+          "elapsedNs": 250810961,
+          "operations": 67584
+        },
+        "decimal-lab": {
+          "nsPerOp": 1266.8551415512243,
+          "elapsedNs": 251668375,
+          "operations": 198656
+        },
+        "big.js": {
+          "nsPerOp": 3533.458815759892,
+          "elapsedNs": 251469197,
+          "operations": 71168
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "construct",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 687.4014714273175,
+          "elapsedNs": 250588082,
+          "operations": 364544
+        },
+        "decimal-lab": {
+          "nsPerOp": 188.27172032798208,
+          "elapsedNs": 252940797,
+          "operations": 1343488
+        },
+        "big.js": {
+          "nsPerOp": 333.2548284115999,
+          "elapsedNs": 251162167,
+          "operations": 753664
+        },
+        "decimal.js": {
+          "nsPerOp": 465.38989997632575,
+          "elapsedNs": 251623288,
+          "operations": 540672
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "plus",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 188.25103238733803,
+          "elapsedNs": 252913003,
+          "operations": 1343488
+        },
+        "big.js": {
+          "nsPerOp": 254.4009256998698,
+          "elapsedNs": 250086286,
+          "operations": 983040
+        },
+        "decimal.js": {
+          "nsPerOp": 273.5566101074219,
+          "elapsedNs": 250989284,
+          "operations": 917504
+        },
+        "before": {
+          "nsPerOp": 813.9667422645971,
+          "elapsedNs": 253384591,
+          "operations": 311296
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "minus",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 266.4716223675272,
+          "elapsedNs": 251037586,
+          "operations": 942080
+        },
+        "decimal.js": {
+          "nsPerOp": 264.896345467403,
+          "elapsedNs": 251723580,
+          "operations": 950272
+        },
+        "before": {
+          "nsPerOp": 1406.1365896641523,
+          "elapsedNs": 250539793,
+          "operations": 178176
+        },
+        "decimal-lab": {
+          "nsPerOp": 195.91972077198517,
+          "elapsedNs": 250375999,
+          "operations": 1277952
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "times",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 955.092113494873,
+          "elapsedNs": 250371667,
+          "operations": 262144
+        },
+        "before": {
+          "nsPerOp": 786.432366786859,
+          "elapsedNs": 251255704,
+          "operations": 319488
+        },
+        "decimal-lab": {
+          "nsPerOp": 82.26476821079049,
+          "elapsedNs": 250695629,
+          "operations": 3047424
+        },
+        "big.js": {
+          "nsPerOp": 2158.495785361842,
+          "elapsedNs": 251974164,
+          "operations": 116736
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "div",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 1017.5983072916666,
+          "elapsedNs": 250084960,
+          "operations": 245760
+        },
+        "decimal-lab": {
+          "nsPerOp": 380.4653395664545,
+          "elapsedNs": 252458537,
+          "operations": 663552
+        },
+        "big.js": {
+          "nsPerOp": 23647.48465737952,
+          "elapsedNs": 251230877,
+          "operations": 10624
+        },
+        "decimal.js": {
+          "nsPerOp": 2516.962357039304,
+          "elapsedNs": 250004837,
+          "operations": 99328
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "mod",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 278.5274569424716,
+          "elapsedNs": 250986662,
+          "operations": 901120
+        },
+        "big.js": {
+          "nsPerOp": 1152.974250073703,
+          "elapsedNs": 250296874,
+          "operations": 217088
+        },
+        "decimal.js": {
+          "nsPerOp": 1169.5033854166666,
+          "elapsedNs": 251490008,
+          "operations": 215040
+        },
+        "before": {
+          "nsPerOp": 1881.4650165264422,
+          "elapsedNs": 250460623,
+          "operations": 133120
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "sqrt",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 148341.51650943398,
+          "elapsedNs": 251587212,
+          "operations": 1696
+        },
+        "decimal.js": {
+          "nsPerOp": 16469.124277836134,
+          "elapsedNs": 250857701,
+          "operations": 15232
+        },
+        "before": {
+          "nsPerOp": 1808.4061638327205,
+          "elapsedNs": 251845876,
+          "operations": 139264
+        },
+        "decimal-lab": {
+          "nsPerOp": 1486.8705819371235,
+          "elapsedNs": 252744209,
+          "operations": 169984
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "pow3",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 3682.6554337686566,
+          "elapsedNs": 252659624,
+          "operations": 68608
+        },
+        "before": {
+          "nsPerOp": 3020.9524860146603,
+          "elapsedNs": 250569883,
+          "operations": 82944
+        },
+        "decimal-lab": {
+          "nsPerOp": 1465.942626953125,
+          "elapsedNs": 252189042,
+          "operations": 172032
+        },
+        "big.js": {
+          "nsPerOp": 7171.088343523551,
+          "elapsedNs": 253340209,
+          "operations": 35328
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "round2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 376.5917432831555,
+          "elapsedNs": 252973244,
+          "operations": 671744
+        },
+        "decimal-lab": {
+          "nsPerOp": 76.21246519183168,
+          "elapsedNs": 252230336,
+          "operations": 3309568
+        },
+        "big.js": {
+          "nsPerOp": 89.21504885651345,
+          "elapsedNs": 251412290,
+          "operations": 2818048
+        },
+        "decimal.js": {
+          "nsPerOp": 282.29403490538994,
+          "elapsedNs": 252068248,
+          "operations": 892928
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "prec10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 445.5224308622056,
+          "elapsedNs": 251830663,
+          "operations": 565248
+        },
+        "big.js": {
+          "nsPerOp": 95.92145347595215,
+          "elapsedNs": 251452335,
+          "operations": 2621440
+        },
+        "decimal.js": {
+          "nsPerOp": 278.1725286310369,
+          "elapsedNs": 250666829,
+          "operations": 901120
+        },
+        "before": {
+          "nsPerOp": 822.37861328125,
+          "elapsedNs": 252634710,
+          "operations": 307200
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "cmp",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 67.34535592062431,
+          "elapsedNs": 251572079,
+          "operations": 3735552
+        },
+        "decimal.js": {
+          "nsPerOp": 114.14200421233676,
+          "elapsedNs": 250593748,
+          "operations": 2195456
+        },
+        "before": {
+          "nsPerOp": 474.5299579326923,
+          "elapsedNs": 252677712,
+          "operations": 532480
+        },
+        "decimal-lab": {
+          "nsPerOp": 69.83569696599787,
+          "elapsedNs": 251721373,
+          "operations": 3604480
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "toString",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 175.6524861653646,
+          "elapsedNs": 250376459,
+          "operations": 1425408
+        },
+        "before": {
+          "nsPerOp": 312.8741467534279,
+          "elapsedNs": 251180371,
+          "operations": 802816
+        },
+        "decimal-lab": {
+          "nsPerOp": 151.36524464824413,
+          "elapsedNs": 250476785,
+          "operations": 1654784
+        },
+        "big.js": {
+          "nsPerOp": 340.15814615885415,
+          "elapsedNs": 250791798,
+          "operations": 737280
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "toFixed2",
+      "round": 4,
+      "measurements": {
+        "before": {
+          "nsPerOp": 320.56130091349286,
+          "elapsedNs": 252099665,
+          "operations": 786432
+        },
+        "decimal-lab": {
+          "nsPerOp": 218.10709402901784,
+          "elapsedNs": 250142664,
+          "operations": 1146880
+        },
+        "big.js": {
+          "nsPerOp": 433.592314384353,
+          "elapsedNs": 252191165,
+          "operations": 581632
+        },
+        "decimal.js": {
+          "nsPerOp": 400.1334038276177,
+          "elapsedNs": 252397749,
+          "operations": 630784
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "toPrecision10",
+      "round": 4,
+      "measurements": {
+        "decimal-lab": {
+          "nsPerOp": 522.9412226228633,
+          "elapsedNs": 250610168,
+          "operations": 479232
+        },
+        "big.js": {
+          "nsPerOp": 258.93941174523303,
+          "elapsedNs": 250305336,
+          "operations": 966656
+        },
+        "decimal.js": {
+          "nsPerOp": 388.0921739022943,
+          "elapsedNs": 251160836,
+          "operations": 647168
+        },
+        "before": {
+          "nsPerOp": 1033.6252585018383,
+          "elapsedNs": 251906879,
+          "operations": 243712
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "toExponential8",
+      "round": 4,
+      "measurements": {
+        "big.js": {
+          "nsPerOp": 253.778085251485,
+          "elapsedNs": 251552959,
+          "operations": 991232
+        },
+        "decimal.js": {
+          "nsPerOp": 368.98479121564384,
+          "elapsedNs": 250886043,
+          "operations": 679936
+        },
+        "before": {
+          "nsPerOp": 991.4969246156754,
+          "elapsedNs": 251792627,
+          "operations": 253952
+        },
+        "decimal-lab": {
+          "nsPerOp": 509.2111409505208,
+          "elapsedNs": 250287460,
+          "operations": 491520
+        }
+      }
+    },
+    {
+      "group": "30-digit",
+      "operation": "endToEnd",
+      "round": 4,
+      "measurements": {
+        "decimal.js": {
+          "nsPerOp": 2810.9720388829023,
+          "elapsedNs": 250423877,
+          "operations": 89088
+        },
+        "before": {
+          "nsPerOp": 4106.8126641281515,
+          "elapsedNs": 250219882,
+          "operations": 60928
+        },
+        "decimal-lab": {
+          "nsPerOp": 1424.682367369186,
+          "elapsedNs": 250926456,
+          "operations": 176128
+        },
+        "big.js": {
+          "nsPerOp": 5017.973333864796,
+          "elapsedNs": 251781830,
+          "operations": 50176
+        }
+      }
+    }
+  ]
+}

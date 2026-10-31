@@ -1,0 +1,4818 @@
+{
+  "startedAt": "2026-10-31T12:26:20.548Z",
+  "completedAt": "2026-10-31T12:27:01.371Z",
+  "node": "v24.14.0",
+  "v8": "13.6.233.17-node.41",
+  "cpu": "Apple M2",
+  "os": "darwin 25.3.0 arm64",
+  "sourceSha256": "dfb311e191018414b257ca58d5c01f241dc7ef83d1afd8215507611b39f1637e",
+  "versions": {
+    "big.js": "7.0.1",
+    "decimal.js": "10.6.0"
+  },
+  "methodology": {
+    "rounds": 3,
+    "targetMinutesPerLibrary": 0.1,
+    "actualMeasuredSeconds": {
+      "before": 6.202497966,
+      "decimal-lab": 6.202507691000001,
+      "big.js": 6.195242619000001,
+      "decimal.js": 6.183673934000001
+    },
+    "cases": 48,
+    "groups": [
+      "small",
+      "boundary",
+      "30-digit"
+    ],
+    "baselinePath": "/private/tmp/decimal-lab-before-small",
+    "operandPairsPerCase": 32,
+    "minMeasurementMsPerRoundAndCase": 41.666666666666664,
+    "warmupMsPerCase": 20,
+    "sampling": "equal time per case/library; median across independent Node processes; alternating group/operation order and rotating library order",
+    "allocation": "all outputs escape through a 32-slot sink, natural GC included; no forced GC; memory not benchmarked",
+    "rounding": "HALF_EVEN; division/sqrt final output 20 decimal places; exact +/-/*/cube",
+    "decimalAdaptation": "operation-specific cloned constructors; exact precision sufficient for all digits; div/sqrt/chain precision sized for integer digits + 20 decimal places + 10 guard digits; toDP(20) included in timing",
+    "scope": "fixed mixed-sign/scale inputs on Node, no browser or arbitrary-input correctness guarantee from benchmark preflight"
+  },
+  "preflight": {
+    "assertions": 4608,
+    "settings": {
+      "small": {
+        "exactPrecision": 68,
+        "divPrecision": 32,
+        "sqrtPrecision": 36,
+        "chainPrecision": 44,
+        "guardDigits": 10
+      },
+      "boundary": {
+        "exactPrecision": 80,
+        "divPrecision": 33,
+        "sqrtPrecision": 38,
+        "chainPrecision": 48,
+        "guardDigits": 10
+      },
+      "30-digit": {
+        "exactPrecision": 122,
+        "divPrecision": 32,
+        "sqrtPrecision": 45,
+        "chainPrecision": 62,
+        "guardDigits": 10
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "small",
+      "operation": "construct",
+      "measurements": {
+        "before": {
+          "medianNs": 531.897998046875,
+          "minNs": 531.0032958984375,
+          "maxNs": 685.9456380208334,
+          "measuredSeconds": 0.129217374,
+          "samples": [
+            {
+              "nsPerOp": 531.0032958984375,
+              "elapsedNs": 43499790,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 685.9456380208334,
+              "elapsedNs": 42144500,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 531.897998046875,
+              "elapsedNs": 43573084,
+              "operations": 81920
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 150.27856804342832,
+          "minNs": 146.12579006618924,
+          "maxNs": 166.87870025634766,
+          "measuredSeconds": 0.128697288,
+          "samples": [
+            {
+              "nsPerOp": 146.12579006618924,
+              "elapsedNs": 43094249,
+              "operations": 294912
+            },
+            {
+              "nsPerOp": 166.87870025634766,
+              "elapsedNs": 43746250,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 150.27856804342832,
+              "elapsedNs": 41856789,
+              "operations": 278528
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 163.1118392944336,
+          "minNs": 159.39251708984375,
+          "maxNs": 240.5492609197443,
+          "measuredSeconds": 0.127895332,
+          "samples": [
+            {
+              "nsPerOp": 163.1118392944336,
+              "elapsedNs": 42758790,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 240.5492609197443,
+              "elapsedNs": 43352750,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 159.39251708984375,
+              "elapsedNs": 41783792,
+              "operations": 262144
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 290.2591959635417,
+          "minNs": 275.41124203330594,
+          "maxNs": 344.4115478515625,
+          "measuredSeconds": 0.12798895999999998,
+          "samples": [
+            {
+              "nsPerOp": 275.41124203330594,
+              "elapsedNs": 42867209,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 344.4115478515625,
+              "elapsedNs": 42321291,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 290.2591959635417,
+              "elapsedNs": 42800460,
+              "operations": 147456
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "plus",
+      "measurements": {
+        "before": {
+          "medianNs": 511.84794921875,
+          "minNs": 507.5441429501488,
+          "maxNs": 530.0634033203125,
+          "measuredSeconds": 0.129010295,
+          "samples": [
+            {
+              "nsPerOp": 511.84794921875,
+              "elapsedNs": 41930584,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 530.0634033203125,
+              "elapsedNs": 43422794,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 507.5441429501488,
+              "elapsedNs": 43656917,
+              "operations": 86016
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 59.27594271573153,
+          "minNs": 57.7092170715332,
+          "maxNs": 70.75649515787761,
+          "measuredSeconds": 0.129850044,
+          "samples": [
+            {
+              "nsPerOp": 57.7092170715332,
+              "elapsedNs": 45384375,
+              "operations": 786432
+            },
+            {
+              "nsPerOp": 70.75649515787761,
+              "elapsedNs": 41733879,
+              "operations": 589824
+            },
+            {
+              "nsPerOp": 59.27594271573153,
+              "elapsedNs": 42731790,
+              "operations": 720896
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 96.92536926269531,
+          "minNs": 89.9062255859375,
+          "maxNs": 171.79192301432292,
+          "measuredSeconds": 0.130874998,
+          "samples": [
+            {
+              "nsPerOp": 89.9062255859375,
+              "elapsedNs": 44190708,
+              "operations": 491520
+            },
+            {
+              "nsPerOp": 171.79192301432292,
+              "elapsedNs": 42219583,
+              "operations": 245760
+            },
+            {
+              "nsPerOp": 96.92536926269531,
+              "elapsedNs": 44464707,
+              "operations": 458752
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 158.49139404296875,
+          "minNs": 157.26112994025735,
+          "maxNs": 295.3900960286458,
+          "measuredSeconds": 0.131502961,
+          "samples": [
+            {
+              "nsPerOp": 157.26112994025735,
+              "elapsedNs": 43801628,
+              "operations": 278528
+            },
+            {
+              "nsPerOp": 295.3900960286458,
+              "elapsedNs": 43557042,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 158.49139404296875,
+              "elapsedNs": 44144291,
+              "operations": 278528
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "minus",
+      "measurements": {
+        "before": {
+          "medianNs": 980.0442338423295,
+          "minNs": 966.5971457741477,
+          "maxNs": 1001.1063523065476,
+          "measuredSeconds": 0.130763456,
+          "samples": [
+            {
+              "nsPerOp": 980.0442338423295,
+              "elapsedNs": 44156873,
+              "operations": 45056
+            },
+            {
+              "nsPerOp": 1001.1063523065476,
+              "elapsedNs": 43055582,
+              "operations": 43008
+            },
+            {
+              "nsPerOp": 966.5971457741477,
+              "elapsedNs": 43551001,
+              "operations": 45056
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 68.37109214381168,
+          "minNs": 63.93356475830078,
+          "maxNs": 88.98196411132812,
+          "measuredSeconds": 0.128203211,
+          "samples": [
+            {
+              "nsPerOp": 68.37109214381168,
+              "elapsedNs": 42567295,
+              "operations": 622592
+            },
+            {
+              "nsPerOp": 88.98196411132812,
+              "elapsedNs": 43736415,
+              "operations": 491520
+            },
+            {
+              "nsPerOp": 63.93356475830078,
+              "elapsedNs": 41899501,
+              "operations": 655360
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 95.54254150390625,
+          "minNs": 93.6009543282645,
+          "maxNs": 187.43496704101562,
+          "measuredSeconds": 0.12976304,
+          "samples": [
+            {
+              "nsPerOp": 93.6009543282645,
+              "elapsedNs": 42939625,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 187.43496704101562,
+              "elapsedNs": 42993083,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 95.54254150390625,
+              "elapsedNs": 43830332,
+              "operations": 458752
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 159.4490966796875,
+          "minNs": 158.34494198069854,
+          "maxNs": 301.43858427159927,
+          "measuredSeconds": 0.127881667,
+          "samples": [
+            {
+              "nsPerOp": 158.34494198069854,
+              "elapsedNs": 44103500,
+              "operations": 278528
+            },
+            {
+              "nsPerOp": 301.43858427159927,
+              "elapsedNs": 41979543,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 159.4490966796875,
+              "elapsedNs": 41798624,
+              "operations": 262144
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "times",
+      "measurements": {
+        "before": {
+          "medianNs": 526.5543212890625,
+          "minNs": 526.099658203125,
+          "maxNs": 528.9677612304688,
+          "measuredSeconds": 0.129566453,
+          "samples": [
+            {
+              "nsPerOp": 526.5543212890625,
+              "elapsedNs": 43135330,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 528.9677612304688,
+              "elapsedNs": 43333039,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 526.099658203125,
+              "elapsedNs": 43098084,
+              "operations": 81920
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 91.53611537388393,
+          "minNs": 88.64525756835937,
+          "maxNs": 93.49941144670758,
+          "measuredSeconds": 0.12845633499999998,
+          "samples": [
+            {
+              "nsPerOp": 93.49941144670758,
+              "elapsedNs": 42893042,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 91.53611537388393,
+              "elapsedNs": 41992376,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 88.64525756835937,
+              "elapsedNs": 43570917,
+              "operations": 491520
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 202.7587890625,
+          "minNs": 194.77354213169642,
+          "maxNs": 260.6539367675781,
+          "measuredSeconds": 0.130567917,
+          "samples": [
+            {
+              "nsPerOp": 194.77354213169642,
+              "elapsedNs": 44676376,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 260.6539367675781,
+              "elapsedNs": 42705541,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 202.7587890625,
+              "elapsedNs": 43186000,
+              "operations": 212992
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 232.7532071200284,
+          "minNs": 231.64643998579547,
+          "maxNs": 333.71449279785156,
+          "measuredSeconds": 0.127436588,
+          "samples": [
+            {
+              "nsPerOp": 231.64643998579547,
+              "elapsedNs": 41748248,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 333.71449279785156,
+              "elapsedNs": 43740626,
+              "operations": 131072
+            },
+            {
+              "nsPerOp": 232.7532071200284,
+              "elapsedNs": 41947714,
+              "operations": 180224
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "div",
+      "measurements": {
+        "before": {
+          "medianNs": 757.0023018973214,
+          "minNs": 748.356462751116,
+          "maxNs": 845.3485630580357,
+          "measuredSeconds": 0.134798961,
+          "samples": [
+            {
+              "nsPerOp": 748.356462751116,
+              "elapsedNs": 42913753,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 845.3485630580357,
+              "elapsedNs": 48475668,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 757.0023018973214,
+              "elapsedNs": 43409540,
+              "operations": 57344
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 213.88732401529947,
+          "minNs": 208.60094275841345,
+          "maxNs": 235.38300670276988,
+          "measuredSeconds": 0.12890395799999999,
+          "samples": [
+            {
+              "nsPerOp": 213.88732401529947,
+              "elapsedNs": 42051959,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 235.38300670276988,
+              "elapsedNs": 42421667,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 208.60094275841345,
+              "elapsedNs": 44430332,
+              "operations": 212992
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 4013.7882254464284,
+          "minNs": 3978.6360677083335,
+          "maxNs": 6622.377103365385,
+          "measuredSeconds": 0.130013088,
+          "samples": [
+            {
+              "nsPerOp": 3978.6360677083335,
+              "elapsedNs": 42778295,
+              "operations": 10752
+            },
+            {
+              "nsPerOp": 6622.377103365385,
+              "elapsedNs": 44078542,
+              "operations": 6656
+            },
+            {
+              "nsPerOp": 4013.7882254464284,
+              "elapsedNs": 43156251,
+              "operations": 10752
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 1563.284702845982,
+          "minNs": 1563.0711146763392,
+          "maxNs": 1763.9177652994792,
+          "measuredSeconds": 0.13298891699999998,
+          "samples": [
+            {
+              "nsPerOp": 1563.284702845982,
+              "elapsedNs": 44822499,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1763.9177652994792,
+              "elapsedNs": 43350043,
+              "operations": 24576
+            },
+            {
+              "nsPerOp": 1563.0711146763392,
+              "elapsedNs": 44816375,
+              "operations": 28672
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "mod",
+      "measurements": {
+        "before": {
+          "medianNs": 1217.7926240808824,
+          "minNs": 1214.5290096507354,
+          "maxNs": 1233.5490866268383,
+          "measuredSeconds": 0.127630955,
+          "samples": [
+            {
+              "nsPerOp": 1214.5290096507354,
+              "elapsedNs": 42285042,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1233.5490866268383,
+              "elapsedNs": 42947245,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1217.7926240808824,
+              "elapsedNs": 42398668,
+              "operations": 34816
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 241.95305286754262,
+          "minNs": 237.25844504616478,
+          "maxNs": 258.42767333984375,
+          "measuredSeconds": 0.12870620300000002,
+          "samples": [
+            {
+              "nsPerOp": 237.25844504616478,
+              "elapsedNs": 42759666,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 258.42767333984375,
+              "elapsedNs": 42340790,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 241.95305286754262,
+              "elapsedNs": 43605747,
+              "operations": 180224
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 311.8797822840074,
+          "minNs": 290.1376953125,
+          "maxNs": 587.3186984592014,
+          "measuredSeconds": 0.129518003,
+          "samples": [
+            {
+              "nsPerOp": 311.8797822840074,
+              "elapsedNs": 43433626,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 587.3186984592014,
+              "elapsedNs": 43301833,
+              "operations": 73728
+            },
+            {
+              "nsPerOp": 290.1376953125,
+              "elapsedNs": 42782544,
+              "operations": 147456
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 742.5973597935268,
+          "minNs": 732.360107421875,
+          "maxNs": 1082.887849506579,
+          "measuredSeconds": 0.126717293,
+          "samples": [
+            {
+              "nsPerOp": 742.5973597935268,
+              "elapsedNs": 42583503,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 1082.887849506579,
+              "elapsedNs": 42137332,
+              "operations": 38912
+            },
+            {
+              "nsPerOp": 732.360107421875,
+              "elapsedNs": 41996458,
+              "operations": 57344
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "sqrt",
+      "measurements": {
+        "before": {
+          "medianNs": 1574.4411057692307,
+          "minNs": 1568.2936072716345,
+          "maxNs": 1575.719501201923,
+          "measuredSeconds": 0.125624125,
+          "samples": [
+            {
+              "nsPerOp": 1574.4411057692307,
+              "elapsedNs": 41917920,
+              "operations": 26624
+            },
+            {
+              "nsPerOp": 1575.719501201923,
+              "elapsedNs": 41951956,
+              "operations": 26624
+            },
+            {
+              "nsPerOp": 1568.2936072716345,
+              "elapsedNs": 41754249,
+              "operations": 26624
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1268.4266142003676,
+          "minNs": 1264.2128044577205,
+          "maxNs": 1275.2150573730469,
+          "measuredSeconds": 0.129962621,
+          "samples": [
+            {
+              "nsPerOp": 1264.2128044577205,
+              "elapsedNs": 44014833,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1268.4266142003676,
+              "elapsedNs": 44161541,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1275.2150573730469,
+              "elapsedNs": 41786247,
+              "operations": 32768
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 37712.455729166664,
+          "minNs": 37520.14409722222,
+          "maxNs": 52301.18028846154,
+          "measuredSeconds": 0.130182537,
+          "samples": [
+            {
+              "nsPerOp": 37712.455729166664,
+              "elapsedNs": 43444749,
+              "operations": 1152
+            },
+            {
+              "nsPerOp": 52301.18028846154,
+              "elapsedNs": 43514582,
+              "operations": 832
+            },
+            {
+              "nsPerOp": 37520.14409722222,
+              "elapsedNs": 43223206,
+              "operations": 1152
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 12409.005301339286,
+          "minNs": 11952.834542410714,
+          "maxNs": 12549.554086538461,
+          "measuredSeconds": 0.12907775000000002,
+          "samples": [
+            {
+              "nsPerOp": 12549.554086538461,
+              "elapsedNs": 41764916,
+              "operations": 3328
+            },
+            {
+              "nsPerOp": 12409.005301339286,
+              "elapsedNs": 44473875,
+              "operations": 3584
+            },
+            {
+              "nsPerOp": 11952.834542410714,
+              "elapsedNs": 42838959,
+              "operations": 3584
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "small",
+      "operation": "pow3",
+      "measurements": {
+        "before": {
+          "medianNs": 1862.3508522727273,
+          "minNs": 1860.2721502130682,
+          "maxNs": 1888.8678977272727,
+          "measuredSeconds": 0.126415667,
+          "samples": [
+            {
+              "nsPerOp": 1862.3508522727273,
+              "elapsedNs": 41955040,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1860.2721502130682,
+              "elapsedNs": 41908211,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1888.8678977272727,
+              "elapsedNs": 42552416,
+              "operations": 22528
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 855.0991617838541,
+          "minNs": 833.9162973257212,
+          "maxNs": 868.3140869140625,
+          "measuredSeconds": 0.129113583,
+          "samples": [
+            {
+              "nsPerOp": 868.3140869140625,
+              "elapsedNs": 42679374,
+              "operations": 49152
+            },
+            {
+              "nsPerOp": 833.9162973257212,
+              "elapsedNs": 44404375,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 855.0991617838541,
+              "elapsedNs": 42029834,
+              "operations": 49152
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 680.5108072916667,
+          "minNs": 671.2144165039062,
+          "maxNs": 850.9207560221354,
+          "measuredSeconds": 0.127623749,
+          "samples": [
+            {
+              "nsPerOp": 671.2144165039062,
+              "elapsedNs": 43988708,
+              "operations": 65536
+            },
+            {
+              "nsPerOp": 850.9207560221354,
+              "elapsedNs": 41824457,
+              "operations": 49152
+            },
+            {
+              "nsPerOp": 680.5108072916667,
+              "elapsedNs": 41810584,
+              "operations": 61440
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 953.2867986505681,
+          "minNs": 918.9105631510416,
+          "maxNs": 1345.6700744628906,
+          "measuredSeconds": 0.13221249899999998,
+          "samples": [
+            {
+              "nsPerOp": 953.2867986505681,
+              "elapsedNs": 42951290,
+              "operations": 45056
+            },
+            {
+              "nsPerOp": 1345.6700744628906,
+              "elapsedNs": 44094917,
+              "operations": 32768
+            },
+            {
+              "nsPerOp": 918.9105631510416,
+              "elapsedNs": 45166292,
+              "operations": 49152
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "round2",
+      "measurements": {
+        "before": {
+          "medianNs": 278.656539113898,
+          "minNs": 265.56065673828124,
+          "maxNs": 284.47751871744794,
+          "measuredSeconds": 0.128829708,
+          "samples": [
+            {
+              "nsPerOp": 265.56065673828124,
+              "elapsedNs": 43509458,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 284.47751871744794,
+              "elapsedNs": 41947917,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 278.656539113898,
+              "elapsedNs": 43372333,
+              "operations": 155648
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 95.6797855922154,
+          "minNs": 95.67842320033482,
+          "maxNs": 100.29249455378606,
+          "measuredSeconds": 0.130508959,
+          "samples": [
+            {
+              "nsPerOp": 95.67842320033482,
+              "elapsedNs": 43892668,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 100.29249455378606,
+              "elapsedNs": 42722998,
+              "operations": 425984
+            },
+            {
+              "nsPerOp": 95.6797855922154,
+              "elapsedNs": 43893293,
+              "operations": 458752
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 64.24134368896485,
+          "minNs": 52.8106689453125,
+          "maxNs": 107.58548227945964,
+          "measuredSeconds": 0.12939854,
+          "samples": [
+            {
+              "nsPerOp": 64.24134368896485,
+              "elapsedNs": 42101207,
+              "operations": 655360
+            },
+            {
+              "nsPerOp": 107.58548227945964,
+              "elapsedNs": 42304333,
+              "operations": 393216
+            },
+            {
+              "nsPerOp": 52.8106689453125,
+              "elapsedNs": 44993000,
+              "operations": 851968
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 213.2309824625651,
+          "minNs": 212.70646158854166,
+          "maxNs": 274.5412083675987,
+          "measuredSeconds": 0.126474499,
+          "samples": [
+            {
+              "nsPerOp": 213.2309824625651,
+              "elapsedNs": 41922917,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 274.5412083675987,
+              "elapsedNs": 42731790,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 212.70646158854166,
+              "elapsedNs": 41819792,
+              "operations": 196608
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "prec10",
+      "measurements": {
+        "before": {
+          "medianNs": 303.9281580307904,
+          "minNs": 302.05162138097427,
+          "maxNs": 305.8905460133272,
+          "measuredSeconds": 0.126990709,
+          "samples": [
+            {
+              "nsPerOp": 303.9281580307904,
+              "elapsedNs": 42326251,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 302.05162138097427,
+              "elapsedNs": 42064917,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 305.8905460133272,
+              "elapsedNs": 42599541,
+              "operations": 139264
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 119.01936479048295,
+          "minNs": 114.68474578857422,
+          "maxNs": 137.28813733552633,
+          "measuredSeconds": 0.130733417,
+          "samples": [
+            {
+              "nsPerOp": 114.68474578857422,
+              "elapsedNs": 45095877,
+              "operations": 393216
+            },
+            {
+              "nsPerOp": 137.28813733552633,
+              "elapsedNs": 42737248,
+              "operations": 311296
+            },
+            {
+              "nsPerOp": 119.01936479048295,
+              "elapsedNs": 42900292,
+              "operations": 360448
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 64.6195053100586,
+          "minNs": 41.19070243835449,
+          "maxNs": 91.66244724818638,
+          "measuredSeconds": 0.127590952,
+          "samples": [
+            {
+              "nsPerOp": 41.19070243835449,
+              "elapsedNs": 43191582,
+              "operations": 1048576
+            },
+            {
+              "nsPerOp": 91.66244724818638,
+              "elapsedNs": 42050331,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 64.6195053100586,
+              "elapsedNs": 42349039,
+              "operations": 655360
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 191.035151890346,
+          "minNs": 190.41659545898438,
+          "maxNs": 254.734814453125,
+          "measuredSeconds": 0.129231628,
+          "samples": [
+            {
+              "nsPerOp": 191.035151890346,
+              "elapsedNs": 43818879,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 254.734814453125,
+              "elapsedNs": 41735752,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 190.41659545898438,
+              "elapsedNs": 43676997,
+              "operations": 229376
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "cmp",
+      "measurements": {
+        "before": {
+          "medianNs": 267.06923217773436,
+          "minNs": 264.70387573242186,
+          "maxNs": 280.08067562705594,
+          "measuredSeconds": 0.13071970300000002,
+          "samples": [
+            {
+              "nsPerOp": 267.06923217773436,
+              "elapsedNs": 43756623,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 280.08067562705594,
+              "elapsedNs": 43593997,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 264.70387573242186,
+              "elapsedNs": 43369083,
+              "operations": 163840
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 60.770907447451634,
+          "minNs": 59.14052234996449,
+          "maxNs": 77.5741128360524,
+          "measuredSeconds": 0.12766545399999998,
+          "samples": [
+            {
+              "nsPerOp": 59.14052234996449,
+              "elapsedNs": 42634166,
+              "operations": 720896
+            },
+            {
+              "nsPerOp": 77.5741128360524,
+              "elapsedNs": 43213125,
+              "operations": 557056
+            },
+            {
+              "nsPerOp": 60.770907447451634,
+              "elapsedNs": 41818163,
+              "operations": 688128
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 24.7647945697491,
+          "minNs": 22.0295160929362,
+          "maxNs": 78.53586353975184,
+          "measuredSeconds": 0.12925829,
+          "samples": [
+            {
+              "nsPerOp": 22.0295160929362,
+              "elapsedNs": 43311791,
+              "operations": 1966080
+            },
+            {
+              "nsPerOp": 78.53586353975184,
+              "elapsedNs": 43748874,
+              "operations": 557056
+            },
+            {
+              "nsPerOp": 24.7647945697491,
+              "elapsedNs": 42197625,
+              "operations": 1703936
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 71.09599982367621,
+          "minNs": 67.62173461914062,
+          "maxNs": 125.37566266741071,
+          "measuredSeconds": 0.12717213,
+          "samples": [
+            {
+              "nsPerOp": 67.62173461914062,
+              "elapsedNs": 42100751,
+              "operations": 622592
+            },
+            {
+              "nsPerOp": 125.37566266741071,
+              "elapsedNs": 43137252,
+              "operations": 344064
+            },
+            {
+              "nsPerOp": 71.09599982367621,
+              "elapsedNs": 41934127,
+              "operations": 589824
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "toString",
+      "measurements": {
+        "before": {
+          "medianNs": 161.61711883544922,
+          "minNs": 160.18803787231445,
+          "maxNs": 187.13070242745536,
+          "measuredSeconds": 0.127282583,
+          "samples": [
+            {
+              "nsPerOp": 160.18803787231445,
+              "elapsedNs": 41992333,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 187.13070242745536,
+              "elapsedNs": 42923292,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 161.61711883544922,
+              "elapsedNs": 42366958,
+              "operations": 262144
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 161.49473571777344,
+          "minNs": 160.45887756347656,
+          "maxNs": 177.08249104817708,
+          "measuredSeconds": 0.127918001,
+          "samples": [
+            {
+              "nsPerOp": 161.49473571777344,
+              "elapsedNs": 42334876,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 177.08249104817708,
+              "elapsedNs": 43519793,
+              "operations": 245760
+            },
+            {
+              "nsPerOp": 160.45887756347656,
+              "elapsedNs": 42063332,
+              "operations": 262144
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 128.12600708007812,
+          "minNs": 127.38763122558593,
+          "maxNs": 145.25562201605902,
+          "measuredSeconds": 0.126564335,
+          "samples": [
+            {
+              "nsPerOp": 127.38763122558593,
+              "elapsedNs": 41742379,
+              "operations": 327680
+            },
+            {
+              "nsPerOp": 145.25562201605902,
+              "elapsedNs": 42837626,
+              "operations": 294912
+            },
+            {
+              "nsPerOp": 128.12600708007812,
+              "elapsedNs": 41984330,
+              "operations": 327680
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 69.26593660053454,
+          "minNs": 67.21376278525905,
+          "maxNs": 94.61030578613281,
+          "measuredSeconds": 0.12837383600000002,
+          "samples": [
+            {
+              "nsPerOp": 69.26593660053454,
+              "elapsedNs": 43124418,
+              "operations": 622592
+            },
+            {
+              "nsPerOp": 94.61030578613281,
+              "elapsedNs": 43402667,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 67.21376278525905,
+              "elapsedNs": 41846751,
+              "operations": 622592
+            }
+          ]
+        }
+      },
+      "fastest": "decimal.js"
+    },
+    {
+      "group": "small",
+      "operation": "toFixed2",
+      "measurements": {
+        "before": {
+          "medianNs": 245.32403273809524,
+          "minNs": 231.89706698330966,
+          "maxNs": 267.93202611019734,
+          "measuredSeconds": 0.12570008500000002,
+          "samples": [
+            {
+              "nsPerOp": 231.89706698330966,
+              "elapsedNs": 41793417,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 267.93202611019734,
+              "elapsedNs": 41703084,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 245.32403273809524,
+              "elapsedNs": 42203584,
+              "operations": 172032
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 225.97757975260416,
+          "minNs": 209.5037607046274,
+          "maxNs": 299.4373372395833,
+          "measuredSeconds": 0.133205457,
+          "samples": [
+            {
+              "nsPerOp": 209.5037607046274,
+              "elapsedNs": 44622625,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 299.4373372395833,
+              "elapsedNs": 44153832,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 225.97757975260416,
+              "elapsedNs": 44429000,
+              "operations": 196608
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 189.90906633649553,
+          "minNs": 189.2053484235491,
+          "maxNs": 244.99003092447916,
+          "measuredSeconds": 0.12910587299999998,
+          "samples": [
+            {
+              "nsPerOp": 189.2053484235491,
+              "elapsedNs": 43399166,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 244.99003092447916,
+              "elapsedNs": 42146125,
+              "operations": 172032
+            },
+            {
+              "nsPerOp": 189.90906633649553,
+              "elapsedNs": 43560582,
+              "operations": 229376
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 267.90818385074016,
+          "minNs": 267.2724548339844,
+          "maxNs": 376.94369070870533,
+          "measuredSeconds": 0.12872021,
+          "samples": [
+            {
+              "nsPerOp": 267.2724548339844,
+              "elapsedNs": 43789919,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 376.94369070870533,
+              "elapsedNs": 43230918,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 267.90818385074016,
+              "elapsedNs": 41699373,
+              "operations": 155648
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "toPrecision10",
+      "measurements": {
+        "before": {
+          "medianNs": 502.61143275669644,
+          "minNs": 484.5844615589489,
+          "maxNs": 525.3041259765625,
+          "measuredSeconds": 0.129932414,
+          "samples": [
+            {
+              "nsPerOp": 502.61143275669644,
+              "elapsedNs": 43232625,
+              "operations": 86016
+            },
+            {
+              "nsPerOp": 525.3041259765625,
+              "elapsedNs": 43032914,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 484.5844615589489,
+              "elapsedNs": 43666875,
+              "operations": 90112
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 297.26352945963544,
+          "minNs": 296.7255113389757,
+          "maxNs": 344.30340169270835,
+          "measuredSeconds": 0.12989525,
+          "samples": [
+            {
+              "nsPerOp": 296.7255113389757,
+              "elapsedNs": 43753957,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 344.30340169270835,
+              "elapsedNs": 42308002,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 297.26352945963544,
+              "elapsedNs": 43833291,
+              "operations": 147456
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 213.42956034342447,
+          "minNs": 209.23106032151443,
+          "maxNs": 258.5243286132812,
+          "measuredSeconds": 0.128883127,
+          "samples": [
+            {
+              "nsPerOp": 209.23106032151443,
+              "elapsedNs": 44564542,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 258.5243286132812,
+              "elapsedNs": 42356626,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 213.42956034342447,
+              "elapsedNs": 41961959,
+              "operations": 196608
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 279.0104337993421,
+          "minNs": 276.10965126439146,
+          "maxNs": 365.0915788922991,
+          "measuredSeconds": 0.128274954,
+          "samples": [
+            {
+              "nsPerOp": 276.10965126439146,
+              "elapsedNs": 42975915,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 365.0915788922991,
+              "elapsedNs": 41871623,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 279.0104337993421,
+              "elapsedNs": 43427416,
+              "operations": 155648
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "toExponential8",
+      "measurements": {
+        "before": {
+          "medianNs": 492.5348423549107,
+          "minNs": 484.7018931995739,
+          "maxNs": 503.39083426339283,
+          "measuredSeconds": 0.129343,
+          "samples": [
+            {
+              "nsPerOp": 492.5348423549107,
+              "elapsedNs": 42365877,
+              "operations": 86016
+            },
+            {
+              "nsPerOp": 503.39083426339283,
+              "elapsedNs": 43299666,
+              "operations": 86016
+            },
+            {
+              "nsPerOp": 484.7018931995739,
+              "elapsedNs": 43677457,
+              "operations": 90112
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 301.29554658777573,
+          "minNs": 297.0445285373264,
+          "maxNs": 320.5496368408203,
+          "measuredSeconds": 0.12777570300000002,
+          "samples": [
+            {
+              "nsPerOp": 301.29554658777573,
+              "elapsedNs": 41959623,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 320.5496368408203,
+              "elapsedNs": 42015082,
+              "operations": 131072
+            },
+            {
+              "nsPerOp": 297.0445285373264,
+              "elapsedNs": 43800998,
+              "operations": 147456
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 208.1189246544471,
+          "minNs": 207.50291560246393,
+          "maxNs": 259.2320617675781,
+          "measuredSeconds": 0.13099670800000002,
+          "samples": [
+            {
+              "nsPerOp": 207.50291560246393,
+              "elapsedNs": 44196461,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 259.2320617675781,
+              "elapsedNs": 42472581,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 208.1189246544471,
+              "elapsedNs": 44327666,
+              "operations": 212992
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 274.56505062705594,
+          "minNs": 273.7924547697368,
+          "maxNs": 365.8269304547991,
+          "measuredSeconds": 0.12730670800000002,
+          "samples": [
+            {
+              "nsPerOp": 273.7924547697368,
+              "elapsedNs": 42615248,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 365.8269304547991,
+              "elapsedNs": 41955959,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 274.56505062705594,
+              "elapsedNs": 42735501,
+              "operations": 155648
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "small",
+      "operation": "endToEnd",
+      "measurements": {
+        "before": {
+          "medianNs": 3359.4344200721152,
+          "minNs": 3333.5742938701924,
+          "maxNs": 3391.6522623697915,
+          "measuredSeconds": 0.130773955,
+          "samples": [
+            {
+              "nsPerOp": 3359.4344200721152,
+              "elapsedNs": 44720791,
+              "operations": 13312
+            },
+            {
+              "nsPerOp": 3391.6522623697915,
+              "elapsedNs": 41676623,
+              "operations": 12288
+            },
+            {
+              "nsPerOp": 3333.5742938701924,
+              "elapsedNs": 44376541,
+              "operations": 13312
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1084.2821494654606,
+          "minNs": 1072.7474557976973,
+          "maxNs": 1138.1903754340278,
+          "measuredSeconds": 0.125892586,
+          "samples": [
+            {
+              "nsPerOp": 1072.7474557976973,
+              "elapsedNs": 41742749,
+              "operations": 38912
+            },
+            {
+              "nsPerOp": 1138.1903754340278,
+              "elapsedNs": 41958250,
+              "operations": 36864
+            },
+            {
+              "nsPerOp": 1084.2821494654606,
+              "elapsedNs": 42191587,
+              "operations": 38912
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 2620.244384765625,
+          "minNs": 2602.902587890625,
+          "maxNs": 2883.3766276041665,
+          "measuredSeconds": 0.129864705,
+          "samples": [
+            {
+              "nsPerOp": 2620.244384765625,
+              "elapsedNs": 42930084,
+              "operations": 16384
+            },
+            {
+              "nsPerOp": 2883.3766276041665,
+              "elapsedNs": 44288665,
+              "operations": 15360
+            },
+            {
+              "nsPerOp": 2602.902587890625,
+              "elapsedNs": 42645956,
+              "operations": 16384
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 2456.5693359375,
+          "minNs": 2188.960577713816,
+          "maxNs": 2502.606387867647,
+          "measuredSeconds": 0.128917748,
+          "samples": [
+            {
+              "nsPerOp": 2502.606387867647,
+              "elapsedNs": 43565372,
+              "operations": 17408
+            },
+            {
+              "nsPerOp": 2456.5693359375,
+              "elapsedNs": 42763959,
+              "operations": 17408
+            },
+            {
+              "nsPerOp": 2188.960577713816,
+              "elapsedNs": 42588417,
+              "operations": 19456
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "construct",
+      "measurements": {
+        "before": {
+          "medianNs": 691.39404296875,
+          "minNs": 690.68740234375,
+          "maxNs": 696.2056477864584,
+          "measuredSeconds": 0.127689959,
+          "samples": [
+            {
+              "nsPerOp": 691.39404296875,
+              "elapsedNs": 42479250,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 690.68740234375,
+              "elapsedNs": 42435834,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 696.2056477864584,
+              "elapsedNs": 42774875,
+              "operations": 61440
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 177.2355753580729,
+          "minNs": 174.16907552083333,
+          "maxNs": 181.06027425130208,
+          "measuredSeconds": 0.13085858,
+          "samples": [
+            {
+              "nsPerOp": 177.2355753580729,
+              "elapsedNs": 43557415,
+              "operations": 245760
+            },
+            {
+              "nsPerOp": 174.16907552083333,
+              "elapsedNs": 42803792,
+              "operations": 245760
+            },
+            {
+              "nsPerOp": 181.06027425130208,
+              "elapsedNs": 44497373,
+              "operations": 245760
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 238.5855047052557,
+          "minNs": 237.30491499467328,
+          "maxNs": 243.48680530894887,
+          "measuredSeconds": 0.12964904100000002,
+          "samples": [
+            {
+              "nsPerOp": 243.48680530894887,
+              "elapsedNs": 43882166,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 237.30491499467328,
+              "elapsedNs": 42768041,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 238.5855047052557,
+              "elapsedNs": 42998834,
+              "operations": 180224
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 377.98199462890625,
+          "minNs": 370.29229736328125,
+          "maxNs": 394.11653958834137,
+          "measuredSeconds": 0.12778991699999998,
+          "samples": [
+            {
+              "nsPerOp": 377.98199462890625,
+              "elapsedNs": 43349999,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 370.29229736328125,
+              "elapsedNs": 42468083,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 394.11653958834137,
+              "elapsedNs": 41971835,
+              "operations": 106496
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "plus",
+      "measurements": {
+        "before": {
+          "medianNs": 647.9625701904297,
+          "minNs": 628.6657140395221,
+          "maxNs": 669.7927856445312,
+          "measuredSeconds": 0.13013566599999998,
+          "samples": [
+            {
+              "nsPerOp": 628.6657140395221,
+              "elapsedNs": 43775251,
+              "operations": 69632
+            },
+            {
+              "nsPerOp": 647.9625701904297,
+              "elapsedNs": 42464875,
+              "operations": 65536
+            },
+            {
+              "nsPerOp": 669.7927856445312,
+              "elapsedNs": 43895540,
+              "operations": 65536
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 148.46519300672742,
+          "minNs": 146.34110514322916,
+          "maxNs": 169.39179229736328,
+          "measuredSeconds": 0.131346957,
+          "samples": [
+            {
+              "nsPerOp": 146.34110514322916,
+              "elapsedNs": 43157748,
+              "operations": 294912
+            },
+            {
+              "nsPerOp": 169.39179229736328,
+              "elapsedNs": 44405042,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 148.46519300672742,
+              "elapsedNs": 43784167,
+              "operations": 294912
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 186.1779305594308,
+          "minNs": 185.85751342773438,
+          "maxNs": 199.77706674429086,
+          "measuredSeconds": 0.12788691900000002,
+          "samples": [
+            {
+              "nsPerOp": 186.1779305594308,
+              "elapsedNs": 42704749,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 199.77706674429086,
+              "elapsedNs": 42550917,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 185.85751342773438,
+              "elapsedNs": 42631253,
+              "operations": 229376
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 244.10963578657672,
+          "minNs": 237.22722278941762,
+          "maxNs": 291.02833387586804,
+          "measuredSeconds": 0.129662328,
+          "samples": [
+            {
+              "nsPerOp": 237.22722278941762,
+              "elapsedNs": 42754039,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 291.02833387586804,
+              "elapsedNs": 42913874,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 244.10963578657672,
+              "elapsedNs": 43994415,
+              "operations": 180224
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "minus",
+      "measurements": {
+        "before": {
+          "medianNs": 1200.306640625,
+          "minNs": 1194.7891710069443,
+          "maxNs": 1207.6069623161766,
+          "measuredSeconds": 0.127878628,
+          "samples": [
+            {
+              "nsPerOp": 1194.7891710069443,
+              "elapsedNs": 44044708,
+              "operations": 36864
+            },
+            {
+              "nsPerOp": 1207.6069623161766,
+              "elapsedNs": 42044044,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1200.306640625,
+              "elapsedNs": 41789876,
+              "operations": 34816
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 166.25609970092773,
+          "minNs": 164.55316543579102,
+          "maxNs": 188.03897530691964,
+          "measuredSeconds": 0.12985129199999998,
+          "samples": [
+            {
+              "nsPerOp": 164.55316543579102,
+              "elapsedNs": 43136625,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 188.03897530691964,
+              "elapsedNs": 43131628,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 166.25609970092773,
+              "elapsedNs": 43583039,
+              "operations": 262144
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 190.67891148158483,
+          "minNs": 187.15540422712053,
+          "maxNs": 214.73651631673178,
+          "measuredSeconds": 0.128885041,
+          "samples": [
+            {
+              "nsPerOp": 187.15540422712053,
+              "elapsedNs": 42928958,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 214.73651631673178,
+              "elapsedNs": 42218917,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 190.67891148158483,
+              "elapsedNs": 43737166,
+              "operations": 229376
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 246.20833333333334,
+          "minNs": 245.76313920454547,
+          "maxNs": 270.79343775699016,
+          "measuredSeconds": 0.128796585,
+          "samples": [
+            {
+              "nsPerOp": 245.76313920454547,
+              "elapsedNs": 44292416,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 270.79343775699016,
+              "elapsedNs": 42148457,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 246.20833333333334,
+              "elapsedNs": 42355712,
+              "operations": 172032
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "times",
+      "measurements": {
+        "before": {
+          "medianNs": 603.108154296875,
+          "minNs": 600.3944450827206,
+          "maxNs": 629.6619801240809,
+          "measuredSeconds": 0.127646916,
+          "samples": [
+            {
+              "nsPerOp": 600.3944450827206,
+              "elapsedNs": 41806666,
+              "operations": 69632
+            },
+            {
+              "nsPerOp": 629.6619801240809,
+              "elapsedNs": 43844623,
+              "operations": 69632
+            },
+            {
+              "nsPerOp": 603.108154296875,
+              "elapsedNs": 41995627,
+              "operations": 69632
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 84.54617118835449,
+          "minNs": 83.59980773925781,
+          "maxNs": 85.21287434895834,
+          "measuredSeconds": 0.130040751,
+          "samples": [
+            {
+              "nsPerOp": 85.21287434895834,
+              "elapsedNs": 41883832,
+              "operations": 491520
+            },
+            {
+              "nsPerOp": 83.59980773925781,
+              "elapsedNs": 43830376,
+              "operations": 524288
+            },
+            {
+              "nsPerOp": 84.54617118835449,
+              "elapsedNs": 44326543,
+              "operations": 524288
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 523.9461181640625,
+          "minNs": 521.9716430664063,
+          "maxNs": 528.4764770507812,
+          "measuredSeconds": 0.128974376,
+          "samples": [
+            {
+              "nsPerOp": 528.4764770507812,
+              "elapsedNs": 43292793,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 521.9716430664063,
+              "elapsedNs": 42759917,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 523.9461181640625,
+              "elapsedNs": 42921666,
+              "operations": 81920
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 359.59742838541666,
+          "minNs": 357.76435546875,
+          "maxNs": 397.13149789663464,
+          "measuredSeconds": 0.130442332,
+          "samples": [
+            {
+              "nsPerOp": 357.76435546875,
+              "elapsedNs": 43962084,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 397.13149789663464,
+              "elapsedNs": 42292916,
+              "operations": 106496
+            },
+            {
+              "nsPerOp": 359.59742838541666,
+              "elapsedNs": 44187332,
+              "operations": 122880
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "div",
+      "measurements": {
+        "before": {
+          "medianNs": 779.4283970424107,
+          "minNs": 775.4393136160714,
+          "maxNs": 795.5032865084135,
+          "measuredSeconds": 0.131521293,
+          "samples": [
+            {
+              "nsPerOp": 775.4393136160714,
+              "elapsedNs": 44466792,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 795.5032865084135,
+              "elapsedNs": 42358959,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 779.4283970424107,
+              "elapsedNs": 44695542,
+              "operations": 57344
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 223.41621907552084,
+          "minNs": 223.33866373697916,
+          "maxNs": 242.98603959517047,
+          "measuredSeconds": 0.1316275,
+          "samples": [
+            {
+              "nsPerOp": 223.33866373697916,
+              "elapsedNs": 43910168,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 242.98603959517047,
+              "elapsedNs": 43791916,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 223.41621907552084,
+              "elapsedNs": 43925416,
+              "operations": 196608
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 12858.536658653846,
+          "minNs": 12558.618990384615,
+          "maxNs": 12968.81280048077,
+          "measuredSeconds": 0.127748503,
+          "samples": [
+            {
+              "nsPerOp": 12858.536658653846,
+              "elapsedNs": 42793210,
+              "operations": 3328
+            },
+            {
+              "nsPerOp": 12968.81280048077,
+              "elapsedNs": 43160209,
+              "operations": 3328
+            },
+            {
+              "nsPerOp": 12558.618990384615,
+              "elapsedNs": 41795084,
+              "operations": 3328
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 1966.5741257440477,
+          "minNs": 1958.0651633522727,
+          "maxNs": 1999.6046316964287,
+          "measuredSeconds": 0.1294,
+          "samples": [
+            {
+              "nsPerOp": 1958.0651633522727,
+              "elapsedNs": 44111292,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1999.6046316964287,
+              "elapsedNs": 42999498,
+              "operations": 21504
+            },
+            {
+              "nsPerOp": 1966.5741257440477,
+              "elapsedNs": 42289210,
+              "operations": 21504
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "mod",
+      "measurements": {
+        "before": {
+          "medianNs": 1544.0020228794642,
+          "minNs": 1533.543212890625,
+          "maxNs": 2108.390283203125,
+          "measuredSeconds": 0.13141921,
+          "samples": [
+            {
+              "nsPerOp": 2108.390283203125,
+              "elapsedNs": 43179833,
+              "operations": 20480
+            },
+            {
+              "nsPerOp": 1533.543212890625,
+              "elapsedNs": 43969751,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1544.0020228794642,
+              "elapsedNs": 44269626,
+              "operations": 28672
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 328.4842224121094,
+          "minNs": 325.37493896484375,
+          "maxNs": 343.9965087890625,
+          "measuredSeconds": 0.127972919,
+          "samples": [
+            {
+              "nsPerOp": 325.37493896484375,
+              "elapsedNs": 42647544,
+              "operations": 131072
+            },
+            {
+              "nsPerOp": 343.9965087890625,
+              "elapsedNs": 42270291,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 328.4842224121094,
+              "elapsedNs": 43055084,
+              "operations": 131072
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 842.2937575120193,
+          "minNs": 828.5906137319712,
+          "maxNs": 860.9280192057291,
+          "measuredSeconds": 0.131287585,
+          "samples": [
+            {
+              "nsPerOp": 828.5906137319712,
+              "elapsedNs": 44120793,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 860.9280192057291,
+              "elapsedNs": 42316334,
+              "operations": 49152
+            },
+            {
+              "nsPerOp": 842.2937575120193,
+              "elapsedNs": 44850458,
+              "operations": 53248
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 1102.531558388158,
+          "minNs": 1090.1896587171052,
+          "maxNs": 1165.024386935764,
+          "measuredSeconds": 0.128270627,
+          "samples": [
+            {
+              "nsPerOp": 1102.531558388158,
+              "elapsedNs": 42901708,
+              "operations": 38912
+            },
+            {
+              "nsPerOp": 1165.024386935764,
+              "elapsedNs": 42947459,
+              "operations": 36864
+            },
+            {
+              "nsPerOp": 1090.1896587171052,
+              "elapsedNs": 42421460,
+              "operations": 38912
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "sqrt",
+      "measurements": {
+        "before": {
+          "medianNs": 1769.031005859375,
+          "minNs": 1759.3230387369792,
+          "maxNs": 1772.0167236328125,
+          "measuredSeconds": 0.130261912,
+          "samples": [
+            {
+              "nsPerOp": 1759.3230387369792,
+              "elapsedNs": 43237123,
+              "operations": 24576
+            },
+            {
+              "nsPerOp": 1769.031005859375,
+              "elapsedNs": 43475706,
+              "operations": 24576
+            },
+            {
+              "nsPerOp": 1772.0167236328125,
+              "elapsedNs": 43549083,
+              "operations": 24576
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1454.132045200893,
+          "minNs": 1436.1070638020833,
+          "maxNs": 1454.8485281808037,
+          "measuredSeconds": 0.12752349999999998,
+          "samples": [
+            {
+              "nsPerOp": 1454.8485281808037,
+              "elapsedNs": 41713417,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1436.1070638020833,
+              "elapsedNs": 44117209,
+              "operations": 30720
+            },
+            {
+              "nsPerOp": 1454.132045200893,
+              "elapsedNs": 41692874,
+              "operations": 28672
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 54348.30859375,
+          "minNs": 54291.016927083336,
+          "maxNs": 54811.037760416664,
+          "measuredSeconds": 0.125529879,
+          "samples": [
+            {
+              "nsPerOp": 54348.30859375,
+              "elapsedNs": 41739501,
+              "operations": 768
+            },
+            {
+              "nsPerOp": 54291.016927083336,
+              "elapsedNs": 41695501,
+              "operations": 768
+            },
+            {
+              "nsPerOp": 54811.037760416664,
+              "elapsedNs": 42094877,
+              "operations": 768
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 13567.599609375,
+          "minNs": 13252.955528846154,
+          "maxNs": 13730.9013671875,
+          "measuredSeconds": 0.127966831,
+          "samples": [
+            {
+              "nsPerOp": 13252.955528846154,
+              "elapsedNs": 44105836,
+              "operations": 3328
+            },
+            {
+              "nsPerOp": 13567.599609375,
+              "elapsedNs": 41679666,
+              "operations": 3072
+            },
+            {
+              "nsPerOp": 13730.9013671875,
+              "elapsedNs": 42181329,
+              "operations": 3072
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "pow3",
+      "measurements": {
+        "before": {
+          "medianNs": 2918.5413643973216,
+          "minNs": 2880.300325520833,
+          "maxNs": 3103.006365740741,
+          "measuredSeconds": 0.12897758199999998,
+          "samples": [
+            {
+              "nsPerOp": 2880.300325520833,
+              "elapsedNs": 44241413,
+              "operations": 15360
+            },
+            {
+              "nsPerOp": 3103.006365740741,
+              "elapsedNs": 42895960,
+              "operations": 13824
+            },
+            {
+              "nsPerOp": 2918.5413643973216,
+              "elapsedNs": 41840209,
+              "operations": 14336
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 911.7694498697916,
+          "minNs": 896.5590006510416,
+          "maxNs": 950.0658735795455,
+          "measuredSeconds": 0.131689128,
+          "samples": [
+            {
+              "nsPerOp": 911.7694498697916,
+              "elapsedNs": 44815292,
+              "operations": 49152
+            },
+            {
+              "nsPerOp": 896.5590006510416,
+              "elapsedNs": 44067668,
+              "operations": 49152
+            },
+            {
+              "nsPerOp": 950.0658735795455,
+              "elapsedNs": 42806168,
+              "operations": 45056
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 1670.7481971153845,
+          "minNs": 1667.8951697716345,
+          "maxNs": 1682.1242112379807,
+          "measuredSeconds": 0.133672916,
+          "samples": [
+            {
+              "nsPerOp": 1667.8951697716345,
+              "elapsedNs": 44406041,
+              "operations": 26624
+            },
+            {
+              "nsPerOp": 1670.7481971153845,
+              "elapsedNs": 44482000,
+              "operations": 26624
+            },
+            {
+              "nsPerOp": 1682.1242112379807,
+              "elapsedNs": 44784875,
+              "operations": 26624
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 1444.7835611979167,
+          "minNs": 1412.6886067708333,
+          "maxNs": 1503.1012137276787,
+          "measuredSeconds": 0.130878463,
+          "samples": [
+            {
+              "nsPerOp": 1444.7835611979167,
+              "elapsedNs": 44383751,
+              "operations": 30720
+            },
+            {
+              "nsPerOp": 1503.1012137276787,
+              "elapsedNs": 43096918,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1412.6886067708333,
+              "elapsedNs": 43397794,
+              "operations": 30720
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "round2",
+      "measurements": {
+        "before": {
+          "medianNs": 363.0201416015625,
+          "minNs": 359.9623046875,
+          "maxNs": 364.6258283342634,
+          "measuredSeconds": 0.13065829,
+          "samples": [
+            {
+              "nsPerOp": 363.0201416015625,
+              "elapsedNs": 44607915,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 364.6258283342634,
+              "elapsedNs": 41818207,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 359.9623046875,
+              "elapsedNs": 44232168,
+              "operations": 122880
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 142.01114908854166,
+          "minNs": 141.36292860243054,
+          "maxNs": 144.78357950846353,
+          "measuredSeconds": 0.126268831,
+          "samples": [
+            {
+              "nsPerOp": 141.36292860243054,
+              "elapsedNs": 41689624,
+              "operations": 294912
+            },
+            {
+              "nsPerOp": 144.78357950846353,
+              "elapsedNs": 42698415,
+              "operations": 294912
+            },
+            {
+              "nsPerOp": 142.01114908854166,
+              "elapsedNs": 41880792,
+              "operations": 294912
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 109.92908477783203,
+          "minNs": 105.11623441256009,
+          "maxNs": 110.50022888183594,
+          "measuredSeconds": 0.131454167,
+          "samples": [
+            {
+              "nsPerOp": 105.11623441256009,
+              "elapsedNs": 44777834,
+              "operations": 425984
+            },
+            {
+              "nsPerOp": 109.92908477783203,
+              "elapsedNs": 43225875,
+              "operations": 393216
+            },
+            {
+              "nsPerOp": 110.50022888183594,
+              "elapsedNs": 43450458,
+              "operations": 393216
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 248.72564697265625,
+          "minNs": 248.14883277529762,
+          "maxNs": 255.09032592773437,
+          "measuredSeconds": 0.12930987,
+          "samples": [
+            {
+              "nsPerOp": 248.72564697265625,
+              "elapsedNs": 44826331,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 255.09032592773437,
+              "elapsedNs": 41793999,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 248.14883277529762,
+              "elapsedNs": 42689540,
+              "operations": 172032
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "prec10",
+      "measurements": {
+        "before": {
+          "medianNs": 489.0432794744318,
+          "minNs": 481.01711203835225,
+          "maxNs": 491.6164085751488,
+          "measuredSeconds": 0.129700959,
+          "samples": [
+            {
+              "nsPerOp": 481.01711203835225,
+              "elapsedNs": 43345414,
+              "operations": 90112
+            },
+            {
+              "nsPerOp": 491.6164085751488,
+              "elapsedNs": 42286877,
+              "operations": 86016
+            },
+            {
+              "nsPerOp": 489.0432794744318,
+              "elapsedNs": 44068668,
+              "operations": 90112
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 301.32189223345586,
+          "minNs": 297.0804443359375,
+          "maxNs": 314.6359217026654,
+          "measuredSeconds": 0.129587043,
+          "samples": [
+            {
+              "nsPerOp": 297.0804443359375,
+              "elapsedNs": 43806294,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 314.6359217026654,
+              "elapsedNs": 43817457,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 301.32189223345586,
+              "elapsedNs": 41963292,
+              "operations": 139264
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 109.86126963297527,
+          "minNs": 109.2800521850586,
+          "maxNs": 119.13184426047586,
+          "measuredSeconds": 0.129110709,
+          "samples": [
+            {
+              "nsPerOp": 109.86126963297527,
+              "elapsedNs": 43199209,
+              "operations": 393216
+            },
+            {
+              "nsPerOp": 109.2800521850586,
+              "elapsedNs": 42970665,
+              "operations": 393216
+            },
+            {
+              "nsPerOp": 119.13184426047586,
+              "elapsedNs": 42940835,
+              "operations": 360448
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 241.24699818004262,
+          "minNs": 228.58514404296875,
+          "maxNs": 241.3951970880682,
+          "measuredSeconds": 0.13192537499999998,
+          "samples": [
+            {
+              "nsPerOp": 241.3951970880682,
+              "elapsedNs": 43505208,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 241.24699818004262,
+              "elapsedNs": 43478499,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 228.58514404296875,
+              "elapsedNs": 44941668,
+              "operations": 196608
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "cmp",
+      "measurements": {
+        "before": {
+          "medianNs": 315.89822208180146,
+          "minNs": 314.2152674057904,
+          "maxNs": 316.2012939453125,
+          "measuredSeconds": 0.13178758200000001,
+          "samples": [
+            {
+              "nsPerOp": 316.2012939453125,
+              "elapsedNs": 44035457,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 315.89822208180146,
+              "elapsedNs": 43993250,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 314.2152674057904,
+              "elapsedNs": 43758875,
+              "operations": 139264
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 88.42730916341146,
+          "minNs": 88.4232421875,
+          "maxNs": 89.72668050130208,
+          "measuredSeconds": 0.13102804099999998,
+          "samples": [
+            {
+              "nsPerOp": 88.42730916341146,
+              "elapsedNs": 43463791,
+              "operations": 491520
+            },
+            {
+              "nsPerOp": 88.4232421875,
+              "elapsedNs": 43461792,
+              "operations": 491520
+            },
+            {
+              "nsPerOp": 89.72668050130208,
+              "elapsedNs": 44102458,
+              "operations": 491520
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 69.17324186626233,
+          "minNs": 65.5038848876953,
+          "maxNs": 69.25509322317023,
+          "measuredSeconds": 0.129113,
+          "samples": [
+            {
+              "nsPerOp": 69.25509322317023,
+              "elapsedNs": 43117667,
+              "operations": 622592
+            },
+            {
+              "nsPerOp": 65.5038848876953,
+              "elapsedNs": 42928626,
+              "operations": 655360
+            },
+            {
+              "nsPerOp": 69.17324186626233,
+              "elapsedNs": 43066707,
+              "operations": 622592
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 120.27486350319602,
+          "minNs": 120.20365212180398,
+          "maxNs": 125.78559221540179,
+          "measuredSeconds": 0.129958294,
+          "samples": [
+            {
+              "nsPerOp": 120.20365212180398,
+              "elapsedNs": 43327166,
+              "operations": 360448
+            },
+            {
+              "nsPerOp": 125.78559221540179,
+              "elapsedNs": 43278294,
+              "operations": 344064
+            },
+            {
+              "nsPerOp": 120.27486350319602,
+              "elapsedNs": 43352834,
+              "operations": 360448
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "toString",
+      "measurements": {
+        "before": {
+          "medianNs": 213.13709513346353,
+          "minNs": 212.98047892252603,
+          "maxNs": 216.37366231282553,
+          "measuredSeconds": 0.126318917,
+          "samples": [
+            {
+              "nsPerOp": 212.98047892252603,
+              "elapsedNs": 41873666,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 216.37366231282553,
+              "elapsedNs": 42540793,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 213.13709513346353,
+              "elapsedNs": 41904458,
+              "operations": 196608
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 215.4852549235026,
+          "minNs": 215.37229919433594,
+          "maxNs": 215.5496826171875,
+          "measuredSeconds": 0.12708883399999998,
+          "samples": [
+            {
+              "nsPerOp": 215.4852549235026,
+              "elapsedNs": 42366125,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 215.37229919433594,
+              "elapsedNs": 42343917,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 215.5496826171875,
+              "elapsedNs": 42378792,
+              "operations": 196608
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 151.99759449678308,
+          "minNs": 151.50601734834558,
+          "maxNs": 152.89321360868567,
+          "measuredSeconds": 0.127119295,
+          "samples": [
+            {
+              "nsPerOp": 151.50601734834558,
+              "elapsedNs": 42198668,
+              "operations": 278528
+            },
+            {
+              "nsPerOp": 151.99759449678308,
+              "elapsedNs": 42335586,
+              "operations": 278528
+            },
+            {
+              "nsPerOp": 152.89321360868567,
+              "elapsedNs": 42585041,
+              "operations": 278528
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 139.76902369449013,
+          "minNs": 139.39399157072367,
+          "maxNs": 140.2213134765625,
+          "measuredSeconds": 0.13055266399999998,
+          "samples": [
+            {
+              "nsPerOp": 140.2213134765625,
+              "elapsedNs": 43650334,
+              "operations": 311296
+            },
+            {
+              "nsPerOp": 139.76902369449013,
+              "elapsedNs": 43509538,
+              "operations": 311296
+            },
+            {
+              "nsPerOp": 139.39399157072367,
+              "elapsedNs": 43392792,
+              "operations": 311296
+            }
+          ]
+        }
+      },
+      "fastest": "decimal.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "toFixed2",
+      "measurements": {
+        "before": {
+          "medianNs": 297.3584798177083,
+          "minNs": 296.2392171223958,
+          "maxNs": 309.2205595128676,
+          "measuredSeconds": 0.13059283400000002,
+          "samples": [
+            {
+              "nsPerOp": 297.3584798177083,
+              "elapsedNs": 43847292,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 309.2205595128676,
+              "elapsedNs": 43063292,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 296.2392171223958,
+              "elapsedNs": 43682250,
+              "operations": 147456
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 243.28730357776988,
+          "minNs": 237.3275812322443,
+          "maxNs": 257.4043212890625,
+          "measuredSeconds": 0.128791461,
+          "samples": [
+            {
+              "nsPerOp": 237.3275812322443,
+              "elapsedNs": 42772126,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 257.4043212890625,
+              "elapsedNs": 42173124,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 243.28730357776988,
+              "elapsedNs": 43846211,
+              "operations": 180224
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 288.9873453776042,
+          "minNs": 284.14069281684027,
+          "maxNs": 289.9613511827257,
+          "measuredSeconds": 0.127267709,
+          "samples": [
+            {
+              "nsPerOp": 289.9613511827257,
+              "elapsedNs": 42756541,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 284.14069281684027,
+              "elapsedNs": 41898250,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 288.9873453776042,
+              "elapsedNs": 42612918,
+              "operations": 147456
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 370.9229823521205,
+          "minNs": 370.8717564174107,
+          "maxNs": 373.6808384486607,
+          "measuredSeconds": 0.127931663,
+          "samples": [
+            {
+              "nsPerOp": 370.9229823521205,
+              "elapsedNs": 42540415,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 373.6808384486607,
+              "elapsedNs": 42856708,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 370.8717564174107,
+              "elapsedNs": 42534540,
+              "operations": 114688
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "boundary",
+      "operation": "toPrecision10",
+      "measurements": {
+        "before": {
+          "medianNs": 715.3890299479167,
+          "minNs": 705.6952799479167,
+          "maxNs": 719.391552734375,
+          "measuredSeconds": 0.131510837,
+          "samples": [
+            {
+              "nsPerOp": 705.6952799479167,
+              "elapsedNs": 43357918,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 719.391552734375,
+              "elapsedNs": 44199417,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 715.3890299479167,
+              "elapsedNs": 43953502,
+              "operations": 61440
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 513.6525146484375,
+          "minNs": 512.3143798828125,
+          "maxNs": 530.8238037109375,
+          "measuredSeconds": 0.127532294,
+          "samples": [
+            {
+              "nsPerOp": 513.6525146484375,
+              "elapsedNs": 42078414,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 530.8238037109375,
+              "elapsedNs": 43485086,
+              "operations": 81920
+            },
+            {
+              "nsPerOp": 512.3143798828125,
+              "elapsedNs": 41968794,
+              "operations": 81920
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 273.05923622532896,
+          "minNs": 266.46142578125,
+          "maxNs": 276.8899889494243,
+          "measuredSeconds": 0.129255537,
+          "samples": [
+            {
+              "nsPerOp": 266.46142578125,
+              "elapsedNs": 43657040,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 276.8899889494243,
+              "elapsedNs": 43097373,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 273.05923622532896,
+              "elapsedNs": 42501124,
+              "operations": 155648
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 365.33538818359375,
+          "minNs": 349.21739908854164,
+          "maxNs": 371.0069144112723,
+          "measuredSeconds": 0.12736146,
+          "samples": [
+            {
+              "nsPerOp": 365.33538818359375,
+              "elapsedNs": 41899585,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 371.0069144112723,
+              "elapsedNs": 42550041,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 349.21739908854164,
+              "elapsedNs": 42911834,
+              "operations": 122880
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "toExponential8",
+      "measurements": {
+        "before": {
+          "medianNs": 684.1572916666667,
+          "minNs": 675.5917663574219,
+          "maxNs": 687.0429361979167,
+          "measuredSeconds": 0.12852212400000002,
+          "samples": [
+            {
+              "nsPerOp": 675.5917663574219,
+              "elapsedNs": 44275582,
+              "operations": 65536
+            },
+            {
+              "nsPerOp": 684.1572916666667,
+              "elapsedNs": 42034624,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 687.0429361979167,
+              "elapsedNs": 42211918,
+              "operations": 61440
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 479.39645108309657,
+          "minNs": 478.35886452414775,
+          "maxNs": 491.20850771949404,
+          "measuredSeconds": 0.128557038,
+          "samples": [
+            {
+              "nsPerOp": 479.39645108309657,
+              "elapsedNs": 43199373,
+              "operations": 90112
+            },
+            {
+              "nsPerOp": 491.20850771949404,
+              "elapsedNs": 42251791,
+              "operations": 86016
+            },
+            {
+              "nsPerOp": 478.35886452414775,
+              "elapsedNs": 43105874,
+              "operations": 90112
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 260.9616638183594,
+          "minNs": 259.32618408203126,
+          "maxNs": 261.15391845703124,
+          "measuredSeconds": 0.128031419,
+          "samples": [
+            {
+              "nsPerOp": 259.32618408203126,
+              "elapsedNs": 42488002,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 261.15391845703124,
+              "elapsedNs": 42787458,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 260.9616638183594,
+              "elapsedNs": 42755959,
+              "operations": 163840
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 342.7076416015625,
+          "minNs": 342.031884765625,
+          "maxNs": 359.9616292317708,
+          "measuredSeconds": 0.128372878,
+          "samples": [
+            {
+              "nsPerOp": 342.031884765625,
+              "elapsedNs": 42028878,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 359.9616292317708,
+              "elapsedNs": 44232085,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 342.7076416015625,
+              "elapsedNs": 42111915,
+              "operations": 122880
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "boundary",
+      "operation": "endToEnd",
+      "measurements": {
+        "before": {
+          "medianNs": 3781.3278586647725,
+          "minNs": 3712.753817471591,
+          "maxNs": 4074.951171875,
+          "measuredSeconds": 0.126140836,
+          "samples": [
+            {
+              "nsPerOp": 3712.753817471591,
+              "elapsedNs": 41820459,
+              "operations": 11264
+            },
+            {
+              "nsPerOp": 4074.951171875,
+              "elapsedNs": 41727500,
+              "operations": 10240
+            },
+            {
+              "nsPerOp": 3781.3278586647725,
+              "elapsedNs": 42592877,
+              "operations": 11264
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1273.3980712890625,
+          "minNs": 1242.1288200827205,
+          "maxNs": 1299.513427734375,
+          "measuredSeconds": 0.127555121,
+          "samples": [
+            {
+              "nsPerOp": 1242.1288200827205,
+              "elapsedNs": 43245957,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 1299.513427734375,
+              "elapsedNs": 42582456,
+              "operations": 32768
+            },
+            {
+              "nsPerOp": 1273.3980712890625,
+              "elapsedNs": 41726708,
+              "operations": 32768
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 3588.3959147135415,
+          "minNs": 3561.4351399739585,
+          "maxNs": 3605.5738932291665,
+          "measuredSeconds": 0.132162416,
+          "samples": [
+            {
+              "nsPerOp": 3561.4351399739585,
+              "elapsedNs": 43762915,
+              "operations": 12288
+            },
+            {
+              "nsPerOp": 3588.3959147135415,
+              "elapsedNs": 44094209,
+              "operations": 12288
+            },
+            {
+              "nsPerOp": 3605.5738932291665,
+              "elapsedNs": 44305292,
+              "operations": 12288
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 2550.7379150390625,
+          "minNs": 2539.349551930147,
+          "maxNs": 2556.3862915039062,
+          "measuredSeconds": 0.12788012,
+          "samples": [
+            {
+              "nsPerOp": 2539.349551930147,
+              "elapsedNs": 44204997,
+              "operations": 17408
+            },
+            {
+              "nsPerOp": 2556.3862915039062,
+              "elapsedNs": 41883833,
+              "operations": 16384
+            },
+            {
+              "nsPerOp": 2550.7379150390625,
+              "elapsedNs": 41791290,
+              "operations": 16384
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "construct",
+      "measurements": {
+        "before": {
+          "medianNs": 692.6941243489583,
+          "minNs": 681.745068359375,
+          "maxNs": 697.0696451822917,
+          "measuredSeconds": 0.127273503,
+          "samples": [
+            {
+              "nsPerOp": 697.0696451822917,
+              "elapsedNs": 42827959,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 681.745068359375,
+              "elapsedNs": 41886417,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 692.6941243489583,
+              "elapsedNs": 42559127,
+              "operations": 61440
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 195.3738970075335,
+          "minNs": 191.66582815987724,
+          "maxNs": 196.3663330078125,
+          "measuredSeconds": 0.130602082,
+          "samples": [
+            {
+              "nsPerOp": 195.3738970075335,
+              "elapsedNs": 44814083,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 191.66582815987724,
+              "elapsedNs": 43963541,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 196.3663330078125,
+              "elapsedNs": 41824458,
+              "operations": 212992
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 333.4811477661133,
+          "minNs": 280.05152652138156,
+          "maxNs": 342.8406005859375,
+          "measuredSeconds": 0.129427754,
+          "samples": [
+            {
+              "nsPerOp": 333.4811477661133,
+              "elapsedNs": 43710041,
+              "operations": 131072
+            },
+            {
+              "nsPerOp": 280.05152652138156,
+              "elapsedNs": 43589460,
+              "operations": 155648
+            },
+            {
+              "nsPerOp": 342.8406005859375,
+              "elapsedNs": 42128253,
+              "operations": 122880
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 476.98416415127843,
+          "minNs": 456.02207438151044,
+          "maxNs": 480.41561612215907,
+          "measuredSeconds": 0.131102003,
+          "samples": [
+            {
+              "nsPerOp": 456.02207438151044,
+              "elapsedNs": 44828794,
+              "operations": 98304
+            },
+            {
+              "nsPerOp": 480.41561612215907,
+              "elapsedNs": 43291212,
+              "operations": 90112
+            },
+            {
+              "nsPerOp": 476.98416415127843,
+              "elapsedNs": 42981997,
+              "operations": 90112
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "plus",
+      "measurements": {
+        "before": {
+          "medianNs": 784.3729905348557,
+          "minNs": 784.2047776442307,
+          "maxNs": 793.0939378004807,
+          "measuredSeconds": 0.12575429500000002,
+          "samples": [
+            {
+              "nsPerOp": 793.0939378004807,
+              "elapsedNs": 42230666,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 784.3729905348557,
+              "elapsedNs": 41766293,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 784.2047776442307,
+              "elapsedNs": 41757336,
+              "operations": 53248
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 188.36866978236608,
+          "minNs": 187.10308837890625,
+          "maxNs": 202.25956843449518,
+          "measuredSeconds": 0.12920388,
+          "samples": [
+            {
+              "nsPerOp": 188.36866978236608,
+              "elapsedNs": 43207252,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 187.10308837890625,
+              "elapsedNs": 42916958,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 202.25956843449518,
+              "elapsedNs": 43079670,
+              "operations": 212992
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 251.27810523623512,
+          "minNs": 196.77407836914062,
+          "maxNs": 266.5397644042969,
+          "measuredSeconds": 0.13203300099999998,
+          "samples": [
+            {
+              "nsPerOp": 251.27810523623512,
+              "elapsedNs": 43227875,
+              "operations": 172032
+            },
+            {
+              "nsPerOp": 196.77407836914062,
+              "elapsedNs": 45135251,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 266.5397644042969,
+              "elapsedNs": 43669875,
+              "operations": 163840
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 302.61860207950366,
+          "minNs": 191.9539315359933,
+          "maxNs": 305.0237821691176,
+          "measuredSeconds": 0.128652334,
+          "samples": [
+            {
+              "nsPerOp": 302.61860207950366,
+              "elapsedNs": 42143877,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 191.9539315359933,
+              "elapsedNs": 44029625,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 305.0237821691176,
+              "elapsedNs": 42478832,
+              "operations": 139264
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "minus",
+      "measurements": {
+        "before": {
+          "medianNs": 1414.6240234375,
+          "minNs": 1405.8079752604167,
+          "maxNs": 1858.6055131392045,
+          "measuredSeconds": 0.128514336,
+          "samples": [
+            {
+              "nsPerOp": 1858.6055131392045,
+              "elapsedNs": 41870665,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1405.8079752604167,
+              "elapsedNs": 43186421,
+              "operations": 30720
+            },
+            {
+              "nsPerOp": 1414.6240234375,
+              "elapsedNs": 43457250,
+              "operations": 30720
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 200.23678354116586,
+          "minNs": 185.05660138811385,
+          "maxNs": 219.3043975830078,
+          "measuredSeconds": 0.128213375,
+          "samples": [
+            {
+              "nsPerOp": 219.3043975830078,
+              "elapsedNs": 43116999,
+              "operations": 196608
+            },
+            {
+              "nsPerOp": 185.05660138811385,
+              "elapsedNs": 42447543,
+              "operations": 229376
+            },
+            {
+              "nsPerOp": 200.23678354116586,
+              "elapsedNs": 42648833,
+              "operations": 212992
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 263.7652099609375,
+          "minNs": 197.7449012169471,
+          "maxNs": 272.8041285464638,
+          "measuredSeconds": 0.12779479100000002,
+          "samples": [
+            {
+              "nsPerOp": 263.7652099609375,
+              "elapsedNs": 43215292,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 197.7449012169471,
+              "elapsedNs": 42118082,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 272.8041285464638,
+              "elapsedNs": 42461417,
+              "operations": 155648
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 300.62328383501836,
+          "minNs": 197.14864408052884,
+          "maxNs": 303.7297937729779,
+          "measuredSeconds": 0.126155711,
+          "samples": [
+            {
+              "nsPerOp": 303.7297937729779,
+              "elapsedNs": 42298626,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 197.14864408052884,
+              "elapsedNs": 41991084,
+              "operations": 212992
+            },
+            {
+              "nsPerOp": 300.62328383501836,
+              "elapsedNs": 41866001,
+              "operations": 139264
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "times",
+      "measurements": {
+        "before": {
+          "medianNs": 799.4658954326923,
+          "minNs": 799.3265850360577,
+          "maxNs": 800.5073429987981,
+          "measuredSeconds": 0.127757917,
+          "samples": [
+            {
+              "nsPerOp": 800.5073429987981,
+              "elapsedNs": 42625415,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 799.3265850360577,
+              "elapsedNs": 42562542,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 799.4658954326923,
+              "elapsedNs": 42569960,
+              "operations": 53248
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 83.3150520324707,
+          "minNs": 78.08977014878216,
+          "maxNs": 83.77138328552246,
+          "measuredSeconds": 0.131101788,
+          "samples": [
+            {
+              "nsPerOp": 83.77138328552246,
+              "elapsedNs": 43920331,
+              "operations": 524288
+            },
+            {
+              "nsPerOp": 78.08977014878216,
+              "elapsedNs": 43500375,
+              "operations": 557056
+            },
+            {
+              "nsPerOp": 83.3150520324707,
+              "elapsedNs": 43681082,
+              "operations": 524288
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 2166.6794305098683,
+          "minNs": 2112.3494140625,
+          "maxNs": 2243.780941611842,
+          "measuredSeconds": 0.129070833,
+          "samples": [
+            {
+              "nsPerOp": 2166.6794305098683,
+              "elapsedNs": 42154915,
+              "operations": 19456
+            },
+            {
+              "nsPerOp": 2112.3494140625,
+              "elapsedNs": 43260916,
+              "operations": 20480
+            },
+            {
+              "nsPerOp": 2243.780941611842,
+              "elapsedNs": 43655002,
+              "operations": 19456
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 885.5548706054688,
+          "minNs": 829.9850323016827,
+          "maxNs": 948.1016956676136,
+          "measuredSeconds": 0.130439506,
+          "samples": [
+            {
+              "nsPerOp": 948.1016956676136,
+              "elapsedNs": 42717670,
+              "operations": 45056
+            },
+            {
+              "nsPerOp": 829.9850323016827,
+              "elapsedNs": 44195043,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 885.5548706054688,
+              "elapsedNs": 43526793,
+              "operations": 49152
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "div",
+      "measurements": {
+        "before": {
+          "medianNs": 1022.996044921875,
+          "minNs": 1014.6233491443452,
+          "maxNs": 1039.6800048828125,
+          "measuredSeconds": 0.128124132,
+          "samples": [
+            {
+              "nsPerOp": 1022.996044921875,
+              "elapsedNs": 41901918,
+              "operations": 40960
+            },
+            {
+              "nsPerOp": 1014.6233491443452,
+              "elapsedNs": 43636921,
+              "operations": 43008
+            },
+            {
+              "nsPerOp": 1039.6800048828125,
+              "elapsedNs": 42585293,
+              "operations": 40960
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 385.2313755580357,
+          "minNs": 375.87301199776783,
+          "maxNs": 394.20065542367786,
+          "measuredSeconds": 0.12927033300000002,
+          "samples": [
+            {
+              "nsPerOp": 385.2313755580357,
+              "elapsedNs": 44181416,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 375.87301199776783,
+              "elapsedNs": 43108124,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 394.20065542367786,
+              "elapsedNs": 41980793,
+              "operations": 106496
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 24068.870535714286,
+          "minNs": 23923.99051339286,
+          "maxNs": 31066.16974431818,
+          "measuredSeconds": 0.129744374,
+          "samples": [
+            {
+              "nsPerOp": 23923.99051339286,
+              "elapsedNs": 42871791,
+              "operations": 1792
+            },
+            {
+              "nsPerOp": 31066.16974431818,
+              "elapsedNs": 43741167,
+              "operations": 1408
+            },
+            {
+              "nsPerOp": 24068.870535714286,
+              "elapsedNs": 43131416,
+              "operations": 1792
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 2403.9595013786766,
+          "minNs": 2289.7203233506943,
+          "maxNs": 2459.987247242647,
+          "measuredSeconds": 0.12687571,
+          "samples": [
+            {
+              "nsPerOp": 2403.9595013786766,
+              "elapsedNs": 41848127,
+              "operations": 17408
+            },
+            {
+              "nsPerOp": 2289.7203233506943,
+              "elapsedNs": 42204125,
+              "operations": 18432
+            },
+            {
+              "nsPerOp": 2459.987247242647,
+              "elapsedNs": 42823458,
+              "operations": 17408
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "mod",
+      "measurements": {
+        "before": {
+          "medianNs": 1922.3429509943182,
+          "minNs": 1883.97412109375,
+          "maxNs": 1925.5703568892045,
+          "measuredSeconds": 0.12912796,
+          "samples": [
+            {
+              "nsPerOp": 1925.5703568892045,
+              "elapsedNs": 43379249,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1883.97412109375,
+              "elapsedNs": 42442169,
+              "operations": 22528
+            },
+            {
+              "nsPerOp": 1922.3429509943182,
+              "elapsedNs": 43306542,
+              "operations": 22528
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 438.04591878255206,
+          "minNs": 421.17740572415863,
+          "maxNs": 439.7642110188802,
+          "measuredSeconds": 0.13114595599999998,
+          "samples": [
+            {
+              "nsPerOp": 438.04591878255206,
+              "elapsedNs": 43061666,
+              "operations": 98304
+            },
+            {
+              "nsPerOp": 421.17740572415863,
+              "elapsedNs": 44853709,
+              "operations": 106496
+            },
+            {
+              "nsPerOp": 439.7642110188802,
+              "elapsedNs": 43230581,
+              "operations": 98304
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 1159.2836100260417,
+          "minNs": 1020.6572998046875,
+          "maxNs": 1169.0808919270833,
+          "measuredSeconds": 0.127638952,
+          "samples": [
+            {
+              "nsPerOp": 1159.2836100260417,
+              "elapsedNs": 42735831,
+              "operations": 36864
+            },
+            {
+              "nsPerOp": 1020.6572998046875,
+              "elapsedNs": 41806123,
+              "operations": 40960
+            },
+            {
+              "nsPerOp": 1169.0808919270833,
+              "elapsedNs": 43096998,
+              "operations": 36864
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 1216.8327493106617,
+          "minNs": 944.584716796875,
+          "maxNs": 1217.8619887408088,
+          "measuredSeconds": 0.127325541,
+          "samples": [
+            {
+              "nsPerOp": 1217.8619887408088,
+              "elapsedNs": 42401083,
+              "operations": 34816
+            },
+            {
+              "nsPerOp": 944.584716796875,
+              "elapsedNs": 42559209,
+              "operations": 45056
+            },
+            {
+              "nsPerOp": 1216.8327493106617,
+              "elapsedNs": 42365249,
+              "operations": 34816
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "sqrt",
+      "measurements": {
+        "before": {
+          "medianNs": 1809.2377717391305,
+          "minNs": 1806.6491292317708,
+          "maxNs": 1814.451416015625,
+          "measuredSeconds": 0.131603335,
+          "samples": [
+            {
+              "nsPerOp": 1806.6491292317708,
+              "elapsedNs": 44400209,
+              "operations": 24576
+            },
+            {
+              "nsPerOp": 1809.2377717391305,
+              "elapsedNs": 42611168,
+              "operations": 23552
+            },
+            {
+              "nsPerOp": 1814.451416015625,
+              "elapsedNs": 44591958,
+              "operations": 24576
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1496.64599609375,
+          "minNs": 1480.2391183035713,
+          "maxNs": 1508.581298828125,
+          "measuredSeconds": 0.128607293,
+          "samples": [
+            {
+              "nsPerOp": 1508.581298828125,
+              "elapsedNs": 43254043,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1480.2391183035713,
+              "elapsedNs": 42441416,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1496.64599609375,
+              "elapsedNs": 42911834,
+              "operations": 28672
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 149602.86805555556,
+          "minNs": 148761.42708333334,
+          "maxNs": 149948.77777777778,
+          "measuredSeconds": 0.129114165,
+          "samples": [
+            {
+              "nsPerOp": 149602.86805555556,
+              "elapsedNs": 43085626,
+              "operations": 288
+            },
+            {
+              "nsPerOp": 148761.42708333334,
+              "elapsedNs": 42843291,
+              "operations": 288
+            },
+            {
+              "nsPerOp": 149948.77777777778,
+              "elapsedNs": 43185248,
+              "operations": 288
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 16305.209765625,
+          "minNs": 16235.708333333334,
+          "maxNs": 16391.471875,
+          "measuredSeconds": 0.12734508900000002,
+          "samples": [
+            {
+              "nsPerOp": 16305.209765625,
+              "elapsedNs": 41741337,
+              "operations": 2560
+            },
+            {
+              "nsPerOp": 16391.471875,
+              "elapsedNs": 41962168,
+              "operations": 2560
+            },
+            {
+              "nsPerOp": 16235.708333333334,
+              "elapsedNs": 43641584,
+              "operations": 2688
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "pow3",
+      "measurements": {
+        "before": {
+          "medianNs": 3043.3785574776784,
+          "minNs": 3042.4080636160716,
+          "maxNs": 3044.046944754464,
+          "measuredSeconds": 0.13088529399999999,
+          "samples": [
+            {
+              "nsPerOp": 3044.046944754464,
+              "elapsedNs": 43639457,
+              "operations": 14336
+            },
+            {
+              "nsPerOp": 3042.4080636160716,
+              "elapsedNs": 43615962,
+              "operations": 14336
+            },
+            {
+              "nsPerOp": 3043.3785574776784,
+              "elapsedNs": 43629875,
+              "operations": 14336
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1456.6011788504463,
+          "minNs": 1455.0287388392858,
+          "maxNs": 1478.178431919643,
+          "measuredSeconds": 0.125864585,
+          "samples": [
+            {
+              "nsPerOp": 1456.6011788504463,
+              "elapsedNs": 41763669,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1455.0287388392858,
+              "elapsedNs": 41718584,
+              "operations": 28672
+            },
+            {
+              "nsPerOp": 1478.178431919643,
+              "elapsedNs": 42382332,
+              "operations": 28672
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 6958.394205729167,
+          "minNs": 6809.278971354167,
+          "maxNs": 6978.522135416667,
+          "measuredSeconds": 0.127464624,
+          "samples": [
+            {
+              "nsPerOp": 6958.394205729167,
+              "elapsedNs": 42752374,
+              "operations": 6144
+            },
+            {
+              "nsPerOp": 6809.278971354167,
+              "elapsedNs": 41836210,
+              "operations": 6144
+            },
+            {
+              "nsPerOp": 6978.522135416667,
+              "elapsedNs": 42876040,
+              "operations": 6144
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 3689.6158854166665,
+          "minNs": 3402.306396484375,
+          "maxNs": 3764.9000355113635,
+          "measuredSeconds": 0.129553375,
+          "samples": [
+            {
+              "nsPerOp": 3689.6158854166665,
+              "elapsedNs": 45338000,
+              "operations": 12288
+            },
+            {
+              "nsPerOp": 3402.306396484375,
+              "elapsedNs": 41807541,
+              "operations": 12288
+            },
+            {
+              "nsPerOp": 3764.9000355113635,
+              "elapsedNs": 42407834,
+              "operations": 11264
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "round2",
+      "measurements": {
+        "before": {
+          "medianNs": 380.860107421875,
+          "minNs": 379.5126168387277,
+          "maxNs": 390.5072980608259,
+          "measuredSeconds": 0.13199212800000001,
+          "samples": [
+            {
+              "nsPerOp": 379.5126168387277,
+              "elapsedNs": 43525543,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 380.860107421875,
+              "elapsedNs": 43680084,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 390.5072980608259,
+              "elapsedNs": 44786501,
+              "operations": 114688
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 93.17261614118304,
+          "minNs": 93.04692077636719,
+          "maxNs": 99.4556157038762,
+          "measuredSeconds": 0.127795086,
+          "samples": [
+            {
+              "nsPerOp": 93.04692077636719,
+              "elapsedNs": 42685461,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 93.17261614118304,
+              "elapsedNs": 42743124,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 99.4556157038762,
+              "elapsedNs": 42366501,
+              "operations": 425984
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 100.94862717848558,
+          "minNs": 65.66143188476562,
+          "maxNs": 104.53101759690504,
+          "measuredSeconds": 0.130562917,
+          "samples": [
+            {
+              "nsPerOp": 104.53101759690504,
+              "elapsedNs": 44528541,
+              "operations": 425984
+            },
+            {
+              "nsPerOp": 65.66143188476562,
+              "elapsedNs": 43031876,
+              "operations": 655360
+            },
+            {
+              "nsPerOp": 100.94862717848558,
+              "elapsedNs": 43002500,
+              "operations": 425984
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 281.54312936883224,
+          "minNs": 233.50455544211647,
+          "maxNs": 285.2851087782118,
+          "measuredSeconds": 0.127971751,
+          "samples": [
+            {
+              "nsPerOp": 285.2851087782118,
+              "elapsedNs": 42067001,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 233.50455544211647,
+              "elapsedNs": 42083125,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 281.54312936883224,
+              "elapsedNs": 43821625,
+              "operations": 155648
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "prec10",
+      "measurements": {
+        "before": {
+          "medianNs": 836.7348445012019,
+          "minNs": 830.1195913461538,
+          "maxNs": 840.7201397235577,
+          "measuredSeconds": 0.133523331,
+          "samples": [
+            {
+              "nsPerOp": 840.7201397235577,
+              "elapsedNs": 44766666,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 836.7348445012019,
+              "elapsedNs": 44554457,
+              "operations": 53248
+            },
+            {
+              "nsPerOp": 830.1195913461538,
+              "elapsedNs": 44202208,
+              "operations": 53248
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 568.905287000868,
+          "minNs": 562.3886333264803,
+          "maxNs": 572.419921875,
+          "measuredSeconds": 0.12791495800000002,
+          "samples": [
+            {
+              "nsPerOp": 568.905287000868,
+              "elapsedNs": 41944249,
+              "operations": 73728
+            },
+            {
+              "nsPerOp": 562.3886333264803,
+              "elapsedNs": 43767333,
+              "operations": 77824
+            },
+            {
+              "nsPerOp": 572.419921875,
+              "elapsedNs": 42203376,
+              "operations": 73728
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 119.31008633700284,
+          "minNs": 71.56111314561632,
+          "maxNs": 119.64242831143466,
+          "measuredSeconds": 0.128338418,
+          "samples": [
+            {
+              "nsPerOp": 119.31008633700284,
+              "elapsedNs": 43005082,
+              "operations": 360448
+            },
+            {
+              "nsPerOp": 71.56111314561632,
+              "elapsedNs": 42208462,
+              "operations": 589824
+            },
+            {
+              "nsPerOp": 119.64242831143466,
+              "elapsedNs": 43124874,
+              "operations": 360448
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 275.6965910259046,
+          "minNs": 235.50993208451703,
+          "maxNs": 285.15768093532984,
+          "measuredSeconds": 0.127404376,
+          "samples": [
+            {
+              "nsPerOp": 285.15768093532984,
+              "elapsedNs": 42048211,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 235.50993208451703,
+              "elapsedNs": 42444542,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 275.6965910259046,
+              "elapsedNs": 42911623,
+              "operations": 155648
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "30-digit",
+      "operation": "cmp",
+      "measurements": {
+        "before": {
+          "medianNs": 467.13163618607956,
+          "minNs": 460.4572448730469,
+          "maxNs": 475.3991144353693,
+          "measuredSeconds": 0.13019812,
+          "samples": [
+            {
+              "nsPerOp": 475.3991144353693,
+              "elapsedNs": 42839165,
+              "operations": 90112
+            },
+            {
+              "nsPerOp": 467.13163618607956,
+              "elapsedNs": 42094166,
+              "operations": 90112
+            },
+            {
+              "nsPerOp": 460.4572448730469,
+              "elapsedNs": 45264789,
+              "operations": 98304
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 162.85912322998047,
+          "minNs": 157.31901640050552,
+          "maxNs": 168.7157974243164,
+          "measuredSeconds": 0.130738127,
+          "samples": [
+            {
+              "nsPerOp": 168.7157974243164,
+              "elapsedNs": 44227834,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 157.31901640050552,
+              "elapsedNs": 43817751,
+              "operations": 278528
+            },
+            {
+              "nsPerOp": 162.85912322998047,
+              "elapsedNs": 42692542,
+              "operations": 262144
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 77.95557538200828,
+          "minNs": 34.31795300935444,
+          "maxNs": 81.47152519226074,
+          "measuredSeconds": 0.12887233,
+          "samples": [
+            {
+              "nsPerOp": 77.95557538200828,
+              "elapsedNs": 43425621,
+              "operations": 557056
+            },
+            {
+              "nsPerOp": 34.31795300935444,
+              "elapsedNs": 42732166,
+              "operations": 1245184
+            },
+            {
+              "nsPerOp": 81.47152519226074,
+              "elapsedNs": 42714543,
+              "operations": 524288
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 121.4574207124256,
+          "minNs": 95.90729631696429,
+          "maxNs": 121.91136308149858,
+          "measuredSeconds": 0.129729497,
+          "samples": [
+            {
+              "nsPerOp": 121.91136308149858,
+              "elapsedNs": 43942707,
+              "operations": 360448
+            },
+            {
+              "nsPerOp": 95.90729631696429,
+              "elapsedNs": 43997664,
+              "operations": 458752
+            },
+            {
+              "nsPerOp": 121.4574207124256,
+              "elapsedNs": 41789126,
+              "operations": 344064
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "30-digit",
+      "operation": "toString",
+      "measurements": {
+        "before": {
+          "medianNs": 310.24887264476104,
+          "minNs": 303.2914680032169,
+          "maxNs": 320.17423248291016,
+          "measuredSeconds": 0.12740995900000002,
+          "samples": [
+            {
+              "nsPerOp": 310.24887264476104,
+              "elapsedNs": 43206499,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 303.2914680032169,
+              "elapsedNs": 42237583,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 320.17423248291016,
+              "elapsedNs": 41965877,
+              "operations": 131072
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 308.9584530101103,
+          "minNs": 304.1441650390625,
+          "maxNs": 310.10854923023896,
+          "measuredSeconds": 0.12857008,
+          "samples": [
+            {
+              "nsPerOp": 308.9584530101103,
+              "elapsedNs": 43026790,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 304.1441650390625,
+              "elapsedNs": 42356333,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 310.10854923023896,
+              "elapsedNs": 43186957,
+              "operations": 139264
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 346.66241861979165,
+          "minNs": 341.8158365885417,
+          "maxNs": 347.92616373697916,
+          "measuredSeconds": 0.127353375,
+          "samples": [
+            {
+              "nsPerOp": 346.66241861979165,
+              "elapsedNs": 42597878,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 341.8158365885417,
+              "elapsedNs": 42002330,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 347.92616373697916,
+              "elapsedNs": 42753167,
+              "operations": 122880
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 164.94272994995117,
+          "minNs": 139.45823267886513,
+          "maxNs": 166.29378128051758,
+          "measuredSeconds": 0.130244454,
+          "samples": [
+            {
+              "nsPerOp": 166.29378128051758,
+              "elapsedNs": 43592917,
+              "operations": 262144
+            },
+            {
+              "nsPerOp": 139.45823267886513,
+              "elapsedNs": 43412790,
+              "operations": 311296
+            },
+            {
+              "nsPerOp": 164.94272994995117,
+              "elapsedNs": 43238747,
+              "operations": 262144
+            }
+          ]
+        }
+      },
+      "fastest": "decimal.js"
+    },
+    {
+      "group": "30-digit",
+      "operation": "toFixed2",
+      "measurements": {
+        "before": {
+          "medianNs": 331.38307189941406,
+          "minNs": 306.5499698414522,
+          "maxNs": 333.5593719482422,
+          "measuredSeconds": 0.129846711,
+          "samples": [
+            {
+              "nsPerOp": 331.38307189941406,
+              "elapsedNs": 43435042,
+              "operations": 131072
+            },
+            {
+              "nsPerOp": 306.5499698414522,
+              "elapsedNs": 42691375,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 333.5593719482422,
+              "elapsedNs": 43720294,
+              "operations": 131072
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 292.06336805555554,
+          "minNs": 289.49510362413196,
+          "maxNs": 301.8128877527574,
+          "measuredSeconds": 0.127785956,
+          "samples": [
+            {
+              "nsPerOp": 289.49510362413196,
+              "elapsedNs": 42687790,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 292.06336805555554,
+              "elapsedNs": 43066496,
+              "operations": 147456
+            },
+            {
+              "nsPerOp": 301.8128877527574,
+              "elapsedNs": 42031670,
+              "operations": 139264
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 432.8062337239583,
+          "minNs": 396.6416579026442,
+          "maxNs": 439.4319356282552,
+          "measuredSeconds": 0.127985251,
+          "samples": [
+            {
+              "nsPerOp": 432.8062337239583,
+              "elapsedNs": 42546584,
+              "operations": 98304
+            },
+            {
+              "nsPerOp": 396.6416579026442,
+              "elapsedNs": 42240750,
+              "operations": 106496
+            },
+            {
+              "nsPerOp": 439.4319356282552,
+              "elapsedNs": 43197917,
+              "operations": 98304
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 427.51353963216144,
+          "minNs": 358.00000813802086,
+          "maxNs": 429.0334879557292,
+          "measuredSeconds": 0.12819304,
+          "samples": [
+            {
+              "nsPerOp": 429.0334879557292,
+              "elapsedNs": 42175708,
+              "operations": 98304
+            },
+            {
+              "nsPerOp": 358.00000813802086,
+              "elapsedNs": 43991041,
+              "operations": 122880
+            },
+            {
+              "nsPerOp": 427.51353963216144,
+              "elapsedNs": 42026291,
+              "operations": 98304
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    },
+    {
+      "group": "30-digit",
+      "operation": "toPrecision10",
+      "measurements": {
+        "before": {
+          "medianNs": 1047.38154296875,
+          "minNs": 995.7072405133929,
+          "maxNs": 1189.70361328125,
+          "measuredSeconds": 0.132017872,
+          "samples": [
+            {
+              "nsPerOp": 1047.38154296875,
+              "elapsedNs": 42900748,
+              "operations": 40960
+            },
+            {
+              "nsPerOp": 995.7072405133929,
+              "elapsedNs": 42823377,
+              "operations": 43008
+            },
+            {
+              "nsPerOp": 1189.70361328125,
+              "elapsedNs": 46293747,
+              "operations": 38912
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 759.8317173549107,
+          "minNs": 736.269269670759,
+          "maxNs": 765.9541713169643,
+          "measuredSeconds": 0.129715291,
+          "samples": [
+            {
+              "nsPerOp": 759.8317173549107,
+              "elapsedNs": 43571790,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 736.269269670759,
+              "elapsedNs": 42220625,
+              "operations": 57344
+            },
+            {
+              "nsPerOp": 765.9541713169643,
+              "elapsedNs": 43922876,
+              "operations": 57344
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 265.45307006835935,
+          "minNs": 233.89274458451703,
+          "maxNs": 274.2381848787007,
+          "measuredSeconds": 0.128329542,
+          "samples": [
+            {
+              "nsPerOp": 265.45307006835935,
+              "elapsedNs": 43491831,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 233.89274458451703,
+              "elapsedNs": 42153086,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 274.2381848787007,
+              "elapsedNs": 42684625,
+              "operations": 155648
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 371.32298060825894,
+          "minNs": 309.61280014935664,
+          "maxNs": 379.3531058175223,
+          "measuredSeconds": 0.129211456,
+          "samples": [
+            {
+              "nsPerOp": 371.32298060825894,
+              "elapsedNs": 42586290,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 309.61280014935664,
+              "elapsedNs": 43117917,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 379.3531058175223,
+              "elapsedNs": 43507249,
+              "operations": 114688
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "30-digit",
+      "operation": "toExponential8",
+      "measurements": {
+        "before": {
+          "medianNs": 998.1166294642857,
+          "minNs": 984.4438011532739,
+          "maxNs": 1022.0041259765625,
+          "measuredSeconds": 0.127127248,
+          "samples": [
+            {
+              "nsPerOp": 1022.0041259765625,
+              "elapsedNs": 41861289,
+              "operations": 40960
+            },
+            {
+              "nsPerOp": 984.4438011532739,
+              "elapsedNs": 42338959,
+              "operations": 43008
+            },
+            {
+              "nsPerOp": 998.1166294642857,
+              "elapsedNs": 42927000,
+              "operations": 43008
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 717.5808430989583,
+          "minNs": 716.4957682291666,
+          "maxNs": 724.1217610677083,
+          "measuredSeconds": 0.13259970799999998,
+          "samples": [
+            {
+              "nsPerOp": 724.1217610677083,
+              "elapsedNs": 44490041,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 716.4957682291666,
+              "elapsedNs": 44021500,
+              "operations": 61440
+            },
+            {
+              "nsPerOp": 717.5808430989583,
+              "elapsedNs": 44088167,
+              "operations": 61440
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 261.7258728027344,
+          "minNs": 236.8614834872159,
+          "maxNs": 270.3180188630757,
+          "measuredSeconds": 0.12764375,
+          "samples": [
+            {
+              "nsPerOp": 261.7258728027344,
+              "elapsedNs": 42881167,
+              "operations": 163840
+            },
+            {
+              "nsPerOp": 236.8614834872159,
+              "elapsedNs": 42688124,
+              "operations": 180224
+            },
+            {
+              "nsPerOp": 270.3180188630757,
+              "elapsedNs": 42074459,
+              "operations": 155648
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 366.03729248046875,
+          "minNs": 310.1671932444853,
+          "maxNs": 369.8479788643973,
+          "measuredSeconds": 0.127592334,
+          "samples": [
+            {
+              "nsPerOp": 369.8479788643973,
+              "elapsedNs": 42417125,
+              "operations": 114688
+            },
+            {
+              "nsPerOp": 310.1671932444853,
+              "elapsedNs": 43195124,
+              "operations": 139264
+            },
+            {
+              "nsPerOp": 366.03729248046875,
+              "elapsedNs": 41980085,
+              "operations": 114688
+            }
+          ]
+        }
+      },
+      "fastest": "big.js"
+    },
+    {
+      "group": "30-digit",
+      "operation": "endToEnd",
+      "measurements": {
+        "before": {
+          "medianNs": 4153.12919921875,
+          "minNs": 4108.1583984375,
+          "maxNs": 4459.6270559210525,
+          "measuredSeconds": 0.127978837,
+          "samples": [
+            {
+              "nsPerOp": 4108.1583984375,
+              "elapsedNs": 42067542,
+              "operations": 10240
+            },
+            {
+              "nsPerOp": 4459.6270559210525,
+              "elapsedNs": 43383252,
+              "operations": 9728
+            },
+            {
+              "nsPerOp": 4153.12919921875,
+              "elapsedNs": 42528043,
+              "operations": 10240
+            }
+          ]
+        },
+        "decimal-lab": {
+          "medianNs": 1431.7332300646551,
+          "minNs": 1428.4111979166667,
+          "maxNs": 1437.9652018229167,
+          "measuredSeconds": 0.130571833,
+          "samples": [
+            {
+              "nsPerOp": 1437.9652018229167,
+              "elapsedNs": 44174291,
+              "operations": 30720
+            },
+            {
+              "nsPerOp": 1431.7332300646551,
+              "elapsedNs": 42516750,
+              "operations": 29696
+            },
+            {
+              "nsPerOp": 1428.4111979166667,
+              "elapsedNs": 43880792,
+              "operations": 30720
+            }
+          ]
+        },
+        "big.js": {
+          "medianNs": 5065.846162683823,
+          "minNs": 4644.382269965277,
+          "maxNs": 5093.14990234375,
+          "measuredSeconds": 0.128618836,
+          "samples": [
+            {
+              "nsPerOp": 5065.846162683823,
+              "elapsedNs": 44093125,
+              "operations": 8704
+            },
+            {
+              "nsPerOp": 4644.382269965277,
+              "elapsedNs": 42802627,
+              "operations": 9216
+            },
+            {
+              "nsPerOp": 5093.14990234375,
+              "elapsedNs": 41723084,
+              "operations": 8192
+            }
+          ]
+        },
+        "decimal.js": {
+          "medianNs": 2812.70625,
+          "minNs": 2591.7079467773438,
+          "maxNs": 2827.7533203125,
+          "measuredSeconds": 0.129100002,
+          "samples": [
+            {
+              "nsPerOp": 2812.70625,
+              "elapsedNs": 43203168,
+              "operations": 15360
+            },
+            {
+              "nsPerOp": 2591.7079467773438,
+              "elapsedNs": 42462543,
+              "operations": 16384
+            },
+            {
+              "nsPerOp": 2827.7533203125,
+              "elapsedNs": 43434291,
+              "operations": 15360
+            }
+          ]
+        }
+      },
+      "fastest": "decimal-lab"
+    }
+  ]
+}

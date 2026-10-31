@@ -1,5 +1,5 @@
 import type { DecimalData } from "./decimal";
-import { checkedScale, checkScale, createDecimal, powerOfTen } from "./internal";
+import { checkScale, createDecimal, MAX_EXPANSION, NUMBER_POWERS_OF_TEN, powerOfTen } from "./internal";
 
 export type RoundingMode = "DOWN" | "UP" | "CEILING" | "FLOOR" | "HALF_UP" | "HALF_DOWN" | "HALF_EVEN" | "UNNECESSARY";
 
@@ -25,13 +25,13 @@ function roundedDivide(numerator: bigint, denominator: bigint, mode: RoundingMod
 export function add(a: DecimalData, b: DecimalData): DecimalData {
   checkScale(a.scale); checkScale(b.scale);
   const scale = Math.max(a.scale, b.scale);
-  const da = BigInt(scale) - BigInt(a.scale);
-  const db = BigInt(scale) - BigInt(b.scale);
-  // Check expansion even when a small fast path might be possible.
-  const pa = powerOfTen(da);
-  const pb = powerOfTen(db);
-  if (a.kind === "small" && b.kind === "small" && da <= 15n && db <= 15n) {
-    const fa = Number(pa), fb = Number(pb);
+  const da = scale - a.scale;
+  const db = scale - b.scale;
+  // Differences within this bound are exact; larger differences are rejected
+  // before creating powers, including differences beyond safe integer range.
+  if (da > MAX_EXPANSION || db > MAX_EXPANSION) throw new RangeError("Decimal expansion exceeds limit");
+  if (a.kind === "small" && b.kind === "small" && da <= 15 && db <= 15) {
+    const fa = NUMBER_POWERS_OF_TEN[da]!, fb = NUMBER_POWERS_OF_TEN[db]!;
     if (Math.abs(a.coefficient) <= Math.floor(Number.MAX_SAFE_INTEGER / fa)
       && Math.abs(b.coefficient) <= Math.floor(Number.MAX_SAFE_INTEGER / fb)) {
       const left = a.coefficient * fa, right = b.coefficient * fb;
@@ -40,7 +40,7 @@ export function add(a: DecimalData, b: DecimalData): DecimalData {
       }
     }
   }
-  return createDecimal(BigInt(a.coefficient) * pa + BigInt(b.coefficient) * pb, scale);
+  return createDecimal(BigInt(a.coefficient) * powerOfTen(BigInt(da)) + BigInt(b.coefficient) * powerOfTen(BigInt(db)), scale);
 }
 
 export function subtract(a: DecimalData, b: DecimalData): DecimalData {
@@ -49,7 +49,7 @@ export function subtract(a: DecimalData, b: DecimalData): DecimalData {
 
 export function multiply(a: DecimalData, b: DecimalData): DecimalData {
   checkScale(a.scale); checkScale(b.scale);
-  const scale = checkedScale(BigInt(a.scale) + BigInt(b.scale));
+  const scale = checkScale(a.scale + b.scale);
   if (a.kind === "small" && b.kind === "small"
     && (b.coefficient === 0 || Math.abs(a.coefficient) <= Math.floor(Number.MAX_SAFE_INTEGER / Math.abs(b.coefficient)))) {
     return createDecimal(a.coefficient * b.coefficient, scale);

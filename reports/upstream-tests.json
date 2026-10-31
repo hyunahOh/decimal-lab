@@ -1,0 +1,3383 @@
+{
+  "implementation": "decimal-lab",
+  "upstreamCommit": "e19cc83cb965bdef18cb31423d81f60140c9e7be",
+  "passed": 46808,
+  "total": 47455,
+  "abortedSuites": 1,
+  "results": [
+    {
+      "method": "abs",
+      "passed": 481,
+      "total": 486,
+      "failed": 5,
+      "failures": [
+        {
+          "number": 24,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 25,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 26,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 27,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 28,
+          "expected": "positive zero",
+          "actual": "0"
+        }
+      ]
+    },
+    {
+      "method": "cmp",
+      "passed": 23798,
+      "total": 23943,
+      "failed": 145,
+      "failures": [
+        {
+          "number": 23799,
+          "expected": ".eq(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23800,
+          "expected": ".eq(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23801,
+          "expected": ".eq(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23802,
+          "expected": ".eq('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23803,
+          "expected": ".eq([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23804,
+          "expected": ".eq({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23805,
+          "expected": ".eq('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23806,
+          "expected": ".eq(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23807,
+          "expected": ".eq('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23808,
+          "expected": ".eq('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23809,
+          "expected": ".eq(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23810,
+          "expected": ".eq(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23811,
+          "expected": ".eq(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23812,
+          "expected": ".eq(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23813,
+          "expected": ".eq('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23814,
+          "expected": ".eq(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23815,
+          "expected": ".eq('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23816,
+          "expected": ".eq(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23817,
+          "expected": ".eq('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23818,
+          "expected": ".eq('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23819,
+          "expected": ".eq('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23820,
+          "expected": ".eq('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23821,
+          "expected": ".eq('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23822,
+          "expected": ".eq('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23823,
+          "expected": ".eq('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23824,
+          "expected": ".eq('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23825,
+          "expected": ".eq('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23826,
+          "expected": ".eq(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23827,
+          "expected": ".eq('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23828,
+          "expected": ".gt(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23829,
+          "expected": ".gt(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23830,
+          "expected": ".gt(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23831,
+          "expected": ".gt('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23832,
+          "expected": ".gt([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23833,
+          "expected": ".gt({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23834,
+          "expected": ".gt('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23835,
+          "expected": ".gt(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23836,
+          "expected": ".gt('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23837,
+          "expected": ".gt('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23838,
+          "expected": ".gt(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23839,
+          "expected": ".gt(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23840,
+          "expected": ".gt(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23841,
+          "expected": ".gt(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23842,
+          "expected": ".gt('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23843,
+          "expected": ".gt(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23844,
+          "expected": ".gt('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23845,
+          "expected": ".gt(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23846,
+          "expected": ".gt('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23847,
+          "expected": ".gt('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23848,
+          "expected": ".gt('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23849,
+          "expected": ".gt('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23850,
+          "expected": ".gt('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23851,
+          "expected": ".gt('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23852,
+          "expected": ".gt('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23853,
+          "expected": ".gt('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23854,
+          "expected": ".gt('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23855,
+          "expected": ".gt(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23856,
+          "expected": ".gt('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23857,
+          "expected": ".gte(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23858,
+          "expected": ".gte(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23859,
+          "expected": ".gte(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23860,
+          "expected": ".gte('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23861,
+          "expected": ".gte([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23862,
+          "expected": ".gte({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23863,
+          "expected": ".gte('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23864,
+          "expected": ".gte(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23865,
+          "expected": ".gte('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23866,
+          "expected": ".gte('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23867,
+          "expected": ".gte(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23868,
+          "expected": ".gte(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23869,
+          "expected": ".gte(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23870,
+          "expected": ".gte(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23871,
+          "expected": ".gte('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23872,
+          "expected": ".gte(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23873,
+          "expected": ".gte('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23874,
+          "expected": ".gte(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23875,
+          "expected": ".gte('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23876,
+          "expected": ".gte('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23877,
+          "expected": ".gte('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23878,
+          "expected": ".gte('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23879,
+          "expected": ".gte('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23880,
+          "expected": ".gte('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23881,
+          "expected": ".gte('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23882,
+          "expected": ".gte('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23883,
+          "expected": ".gte('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23884,
+          "expected": ".gte(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23885,
+          "expected": ".gte('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23886,
+          "expected": ".lt(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23887,
+          "expected": ".lt(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23888,
+          "expected": ".lt(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23889,
+          "expected": ".lt('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23890,
+          "expected": ".lt([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23891,
+          "expected": ".lt({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23892,
+          "expected": ".lt('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23893,
+          "expected": ".lt(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23894,
+          "expected": ".lt('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23895,
+          "expected": ".lt('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23896,
+          "expected": ".lt(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23897,
+          "expected": ".lt(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23898,
+          "expected": ".lt(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23899,
+          "expected": ".lt(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23900,
+          "expected": ".lt('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23901,
+          "expected": ".lt(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23902,
+          "expected": ".lt('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23903,
+          "expected": ".lt(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23904,
+          "expected": ".lt('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23905,
+          "expected": ".lt('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23906,
+          "expected": ".lt('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23907,
+          "expected": ".lt('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23908,
+          "expected": ".lt('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23909,
+          "expected": ".lt('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23910,
+          "expected": ".lt('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23911,
+          "expected": ".lt('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23912,
+          "expected": ".lt('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23913,
+          "expected": ".lt(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23914,
+          "expected": ".lt('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23915,
+          "expected": ".lte(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23916,
+          "expected": ".lte(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23917,
+          "expected": ".lte(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23918,
+          "expected": ".lte('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23919,
+          "expected": ".lte([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23920,
+          "expected": ".lte({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23921,
+          "expected": ".lte('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23922,
+          "expected": ".lte(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23923,
+          "expected": ".lte('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23924,
+          "expected": ".lte('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23925,
+          "expected": ".lte(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23926,
+          "expected": ".lte(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23927,
+          "expected": ".lte(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23928,
+          "expected": ".lte(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23929,
+          "expected": ".lte('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23930,
+          "expected": ".lte(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23931,
+          "expected": ".lte('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23932,
+          "expected": ".lte(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23933,
+          "expected": ".lte('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23934,
+          "expected": ".lte('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23935,
+          "expected": ".lte('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23936,
+          "expected": ".lte('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23937,
+          "expected": ".lte('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23938,
+          "expected": ".lte('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23939,
+          "expected": ".lte('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23940,
+          "expected": ".lte('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23941,
+          "expected": ".lte('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23942,
+          "expected": ".lte(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 23943,
+          "expected": ".lte('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "div",
+      "passed": 4924,
+      "total": 5027,
+      "failed": 103,
+      "failures": [
+        {
+          "number": 1,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 2,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 3,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 4,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 4836,
+          "expected": "Big.DP = undefined to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4838,
+          "expected": "Big.DP = null to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4840,
+          "expected": "Big.DP = NaN to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4842,
+          "expected": "Big.DP = 'NaN' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4844,
+          "expected": "Big.DP = [] to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4846,
+          "expected": "Big.DP = {} to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4848,
+          "expected": "Big.DP = '' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4850,
+          "expected": "Big.DP = ' ' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4852,
+          "expected": "Big.DP = 'hello' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4854,
+          "expected": "Big.DP = '\t' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4856,
+          "expected": "Big.DP = new Date to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4858,
+          "expected": "Big.DP = new RegExp to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4860,
+          "expected": "Big.DP = function () {}  to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4862,
+          "expected": "Big.DP = -1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4864,
+          "expected": "Big.DP = 1.5 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4866,
+          "expected": "Big.DP = 7.5 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4868,
+          "expected": "Big.DP = 0.1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4870,
+          "expected": "Big.DP = '0' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4872,
+          "expected": "Big.DP = '1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4874,
+          "expected": "Big.DP = '1.2' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4876,
+          "expected": "Big.DP = '99' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4878,
+          "expected": "Big.DP = '-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4880,
+          "expected": "Big.DP = -23 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4882,
+          "expected": "Big.DP = 1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4884,
+          "expected": "Big.DP = 1e+99 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4886,
+          "expected": "Big.DP = '-0.01' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4888,
+          "expected": "Big.DP = '-1e-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4890,
+          "expected": "Big.DP = Infinity to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4892,
+          "expected": "Big.DP = '-Infinity' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4894,
+          "expected": "Big.DP = new Big('2') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4896,
+          "expected": "Big.RM = undefined to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4898,
+          "expected": "Big.RM = null to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4900,
+          "expected": "Big.RM = NaN to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4902,
+          "expected": "Big.RM = 'NaN' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4904,
+          "expected": "Big.RM = [] to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4906,
+          "expected": "Big.RM = {} to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4908,
+          "expected": "Big.RM = '' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4910,
+          "expected": "Big.RM = ' ' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4912,
+          "expected": "Big.RM = 'hello' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4914,
+          "expected": "Big.RM = '\t' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4916,
+          "expected": "Big.RM = new Date to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4918,
+          "expected": "Big.RM = new RegExp to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4920,
+          "expected": "Big.RM = function () {}  to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4922,
+          "expected": "Big.RM = -1 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4924,
+          "expected": "Big.RM = 3.1 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4926,
+          "expected": "Big.RM = 1.5 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4928,
+          "expected": "Big.RM = 0.1 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4930,
+          "expected": "Big.RM = 7.5 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4932,
+          "expected": "Big.RM = '0' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4934,
+          "expected": "Big.RM = '1' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4936,
+          "expected": "Big.RM = '1.2' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4938,
+          "expected": "Big.RM = '99' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4940,
+          "expected": "Big.RM = '1.1e1' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4942,
+          "expected": "Big.RM = '-1' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4944,
+          "expected": "Big.RM = -23 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4946,
+          "expected": "Big.RM = 1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4948,
+          "expected": "Big.RM = 1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4950,
+          "expected": "Big.RM = '-0.01' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4952,
+          "expected": "Big.RM = '-1e-1' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4954,
+          "expected": "Big.RM = Infinity to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4956,
+          "expected": "Big.RM = '-Infinity' to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4958,
+          "expected": "Big.RM = new Big('2') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4964,
+          "expected": "Big(0).div(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4965,
+          "expected": "Big('0').div('-0') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4966,
+          "expected": "Big('0.0').div('-0.00') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4967,
+          "expected": "Big('-0.00000000').div('0.000000') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4968,
+          "expected": "Big(1).div(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4969,
+          "expected": "Big(1).div('-0') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4970,
+          "expected": "Big(9.99).div(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4971,
+          "expected": "Big('-9.99').div(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 4972,
+          "expected": ".div(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4973,
+          "expected": ".div(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4974,
+          "expected": ".div(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4975,
+          "expected": ".div('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4976,
+          "expected": ".div([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4977,
+          "expected": ".div({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4978,
+          "expected": ".div('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4979,
+          "expected": ".div(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4980,
+          "expected": ".div('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4981,
+          "expected": ".div('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4982,
+          "expected": ".div(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4983,
+          "expected": ".div(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4984,
+          "expected": ".div(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4985,
+          "expected": ".div(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4986,
+          "expected": ".div('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4987,
+          "expected": ".div(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4988,
+          "expected": ".div('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4989,
+          "expected": ".div(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4990,
+          "expected": ".div('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4991,
+          "expected": ".div('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4992,
+          "expected": ".div('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4993,
+          "expected": ".div('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4994,
+          "expected": ".div('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4995,
+          "expected": ".div('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4996,
+          "expected": ".div('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4997,
+          "expected": ".div('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4998,
+          "expected": ".div('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 4999,
+          "expected": ".div(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 5000,
+          "expected": ".div('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "minus",
+      "passed": 1688,
+      "total": 1723,
+      "failed": 35,
+      "failures": [
+        {
+          "number": 9,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 10,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 11,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 12,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 13,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 14,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 1695,
+          "expected": ".minus(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1696,
+          "expected": ".minus(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1697,
+          "expected": ".minus(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1698,
+          "expected": ".minus('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1699,
+          "expected": ".minus([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1700,
+          "expected": ".minus({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1701,
+          "expected": ".minus('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1702,
+          "expected": ".minus(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1703,
+          "expected": ".minus('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1704,
+          "expected": ".minus('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1705,
+          "expected": ".minus(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1706,
+          "expected": ".minus(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1707,
+          "expected": ".minus(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1708,
+          "expected": ".minus(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1709,
+          "expected": ".minus('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1710,
+          "expected": ".minus(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1711,
+          "expected": ".minus('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1712,
+          "expected": ".minus(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1713,
+          "expected": ".minus('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1714,
+          "expected": ".minus('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1715,
+          "expected": ".minus('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1716,
+          "expected": ".minus('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1717,
+          "expected": ".minus('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1718,
+          "expected": ".minus('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1719,
+          "expected": ".minus('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1720,
+          "expected": ".minus('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1721,
+          "expected": ".minus('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1722,
+          "expected": ".minus(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1723,
+          "expected": ".minus('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "mod",
+      "passed": 1711,
+      "total": 1756,
+      "failed": 45,
+      "failures": [
+        {
+          "number": 1,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 2,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 3,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 4,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 5,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 28,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 29,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 30,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 31,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 34,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 1722,
+          "expected": ".mod(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1723,
+          "expected": ".mod(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1724,
+          "expected": ".mod(0) to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1725,
+          "expected": ".mod('0') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1726,
+          "expected": ".mod('-0') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1727,
+          "expected": ".mod('0.00') to raise an fail.",
+          "actual": "RangeError: Division by zero"
+        },
+        {
+          "number": 1728,
+          "expected": ".mod(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1729,
+          "expected": ".mod(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1730,
+          "expected": ".mod(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1731,
+          "expected": ".mod('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1732,
+          "expected": ".mod([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1733,
+          "expected": ".mod({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1734,
+          "expected": ".mod('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1735,
+          "expected": ".mod(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1736,
+          "expected": ".mod('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1737,
+          "expected": ".mod('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1738,
+          "expected": ".mod(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1739,
+          "expected": ".mod(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1740,
+          "expected": ".mod(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1741,
+          "expected": ".mod(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1742,
+          "expected": ".mod('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1743,
+          "expected": ".mod(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1744,
+          "expected": ".mod('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1745,
+          "expected": ".mod(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1746,
+          "expected": ".mod('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1747,
+          "expected": ".mod('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1748,
+          "expected": ".mod('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1749,
+          "expected": ".mod('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1750,
+          "expected": ".mod('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1751,
+          "expected": ".mod('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1752,
+          "expected": ".mod('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1753,
+          "expected": ".mod('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1754,
+          "expected": ".mod('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1755,
+          "expected": ".mod(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1756,
+          "expected": ".mod('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "neg",
+      "passed": 10,
+      "total": 12,
+      "failed": 2,
+      "failures": [
+        {
+          "number": 1,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 2,
+          "expected": "negative zero",
+          "actual": "-0"
+        }
+      ]
+    },
+    {
+      "method": "plus",
+      "passed": 1810,
+      "total": 1845,
+      "failed": 35,
+      "failures": [
+        {
+          "number": 9,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 10,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 11,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 12,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 13,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 14,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 1817,
+          "expected": ".plus(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1818,
+          "expected": ".plus(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1819,
+          "expected": ".plus(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1820,
+          "expected": ".plus('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1821,
+          "expected": ".plus([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1822,
+          "expected": ".plus({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1823,
+          "expected": ".plus('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1824,
+          "expected": ".plus(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1825,
+          "expected": ".plus('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1826,
+          "expected": ".plus('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1827,
+          "expected": ".plus(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1828,
+          "expected": ".plus(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1829,
+          "expected": ".plus(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1830,
+          "expected": ".plus(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1831,
+          "expected": ".plus('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1832,
+          "expected": ".plus(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1833,
+          "expected": ".plus('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1834,
+          "expected": ".plus(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1835,
+          "expected": ".plus('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1836,
+          "expected": ".plus('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1837,
+          "expected": ".plus('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1838,
+          "expected": ".plus('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1839,
+          "expected": ".plus('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1840,
+          "expected": ".plus('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1841,
+          "expected": ".plus('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1842,
+          "expected": ".plus('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1843,
+          "expected": ".plus('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1844,
+          "expected": ".plus(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1845,
+          "expected": ".plus('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "pow",
+      "passed": 990,
+      "total": 1026,
+      "failed": 36,
+      "failures": [
+        {
+          "number": 965,
+          "expected": ".pow(undefined) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 966,
+          "expected": ".pow(null) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 967,
+          "expected": ".pow(NaN) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 968,
+          "expected": ".pow('NaN') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 969,
+          "expected": ".pow([]) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 970,
+          "expected": ".pow({}) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 971,
+          "expected": ".pow('') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 972,
+          "expected": ".pow(' ') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 973,
+          "expected": ".pow('hello') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 974,
+          "expected": ".pow('\t') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 975,
+          "expected": ".pow(new Date) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 976,
+          "expected": ".pow(new RegExp) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 977,
+          "expected": ".pow(function () {}) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 978,
+          "expected": ".pow(-23.000001) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 979,
+          "expected": ".pow(MAX_POWER + 0.02) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 980,
+          "expected": ".pow(MAX_POWER + 1) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 981,
+          "expected": ".pow(-MAX_POWER - 0.3) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 982,
+          "expected": ".pow(-MAX_POWER - 1) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 983,
+          "expected": ".pow(' 0.1') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 984,
+          "expected": ".pow('7.5 ') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 985,
+          "expected": ".pow(' 0 ') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 986,
+          "expected": ".pow('+1') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 987,
+          "expected": ".pow(' +1.2') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 988,
+          "expected": ".pow('- 99') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 989,
+          "expected": ".pow('9.9.9') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 990,
+          "expected": ".pow('10.1.0') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 991,
+          "expected": ".pow('234.') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 992,
+          "expected": ".pow('.5') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 993,
+          "expected": ".pow('0x16') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 994,
+          "expected": ".pow('1e') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 995,
+          "expected": ".pow('8 e') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 996,
+          "expected": ".pow('77-e') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 997,
+          "expected": ".pow('123e.0') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 998,
+          "expected": ".pow('4e1.') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 999,
+          "expected": ".pow(Infinity) to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        },
+        {
+          "number": 1000,
+          "expected": ".pow('-Infinity') to raise an fail.",
+          "actual": "RangeError: Invalid exponent"
+        }
+      ]
+    },
+    {
+      "method": "prec",
+      "passed": 273,
+      "total": 277,
+      "failed": 4,
+      "failures": [
+        {
+          "number": 274,
+          "expected": "new Big(0).prec(0) to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 275,
+          "expected": "new Big(1).prec(0) to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 276,
+          "expected": "new Big(1).prec() to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 277,
+          "expected": "new Big(1).prec(-1) to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        }
+      ]
+    },
+    {
+      "method": "round",
+      "passed": 5144,
+      "total": 5199,
+      "failed": 55,
+      "error": "upstream/methods/round.js:5291\n  test.isTrue(new Big('9.9').round().c['-1'] === u);\n                                      ^\n\nTypeError: Cannot read properties of undefined (reading '-1')\n    at upstream/methods/round.js:5291:39\n    at test (upstream/test.js:30:5)\n    at upstream/methods/round.js:3:1\n    at Script.runInContext (node:vm:149:12)\n    at Object.runInContext (node:vm:301:6)\n    at file:///Users/hyeona-o/Projects/decimal-lab/scripts/test-upstream.mjs:62:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "failures": [
+        {
+          "number": 4913,
+          "expected": ".round(null) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4914,
+          "expected": ".round(NaN) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4915,
+          "expected": ".round('NaN') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4916,
+          "expected": ".round([]) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4917,
+          "expected": ".round({}) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4918,
+          "expected": ".round('') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4919,
+          "expected": ".round(' ') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4920,
+          "expected": ".round('hello') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4921,
+          "expected": ".round('\t') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4922,
+          "expected": ".round(new Date) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4923,
+          "expected": ".round(new RegExp) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4924,
+          "expected": ".round(function () {}) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4925,
+          "expected": ".round(0.1) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4926,
+          "expected": ".round(7.5) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4927,
+          "expected": ".round('0') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4928,
+          "expected": ".round('1') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4929,
+          "expected": ".round('1.2') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4930,
+          "expected": ".round('99') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4931,
+          "expected": ".round('1.1e1') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4932,
+          "expected": ".round('-1') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4933,
+          "expected": ".round(1e9 + 1) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4934,
+          "expected": ".round(1e9 + 1) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4935,
+          "expected": ".round('-0.01') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4936,
+          "expected": ".round('-1e-1') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4937,
+          "expected": ".round(Infinity) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4938,
+          "expected": ".round('-Infinity') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4939,
+          "expected": ".round(new Big('2')) to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 4940,
+          "expected": ".round(u, null) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4941,
+          "expected": ".round(u, NaN) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4942,
+          "expected": ".round(u, 'NaN') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4943,
+          "expected": ".round(u, []) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4944,
+          "expected": ".round(u, {}) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4945,
+          "expected": ".round(u, '') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4946,
+          "expected": ".round(u, ' ') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4947,
+          "expected": ".round(u, 'hello') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4948,
+          "expected": ".round(u, '\t') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4949,
+          "expected": ".round(u, new Date) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4950,
+          "expected": ".round(u, function () {}) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4951,
+          "expected": ".round(u, new RegExp) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4952,
+          "expected": ".round(u, 0.1) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4953,
+          "expected": ".round(u, 7.5) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4954,
+          "expected": ".round(u, '0') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4955,
+          "expected": ".round(u, '1') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4956,
+          "expected": ".round(u, '1.2') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4957,
+          "expected": ".round(u, '99') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4958,
+          "expected": ".round(u, '1.1e1') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4959,
+          "expected": ".round('u, -1') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4960,
+          "expected": ".round(u, 8.01) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4961,
+          "expected": ".round(u, 9) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4962,
+          "expected": ".round(u, -1) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4963,
+          "expected": ".round(u, '-0.01') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4964,
+          "expected": ".round(u, '-1e-1') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4965,
+          "expected": ".round(u, Infinity) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4966,
+          "expected": ".round(u, '-Infinity') to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        },
+        {
+          "number": 4967,
+          "expected": ".round(u, new Big('2')) to raise an fail.",
+          "actual": "RangeError: Invalid rounding mode"
+        }
+      ]
+    },
+    {
+      "method": "sqrt",
+      "passed": 1224,
+      "total": 1236,
+      "failed": 12,
+      "failures": [
+        {
+          "number": 9,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 10,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 11,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 12,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 1222,
+          "expected": "-1 to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1223,
+          "expected": "'-1' to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1224,
+          "expected": "-0.00000000001 to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1225,
+          "expected": "'-0.00000000001' to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1226,
+          "expected": "-2.3 to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1227,
+          "expected": "'-2.3' to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1228,
+          "expected": "-9.9e9 to raise an fail.",
+          "actual": "RangeError: No square root"
+        },
+        {
+          "number": 1229,
+          "expected": "'-9.9e9' to raise an fail.",
+          "actual": "RangeError: No square root"
+        }
+      ]
+    },
+    {
+      "method": "times",
+      "passed": 2046,
+      "total": 2087,
+      "failed": 41,
+      "failures": [
+        {
+          "number": 1,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 2,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 3,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 4,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 5,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 6,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 7,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 8,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 9,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 10,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 11,
+          "expected": "negative zero",
+          "actual": "-0"
+        },
+        {
+          "number": 12,
+          "expected": "positive zero",
+          "actual": "0"
+        },
+        {
+          "number": 2059,
+          "expected": ".times(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2060,
+          "expected": ".times(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2061,
+          "expected": ".times(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2062,
+          "expected": ".times('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2063,
+          "expected": ".times([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2064,
+          "expected": ".times({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2065,
+          "expected": ".times('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2066,
+          "expected": ".times(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2067,
+          "expected": ".times('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2068,
+          "expected": ".times('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2069,
+          "expected": ".times(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2070,
+          "expected": ".times(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2071,
+          "expected": ".times(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2072,
+          "expected": ".times(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2073,
+          "expected": ".times('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2074,
+          "expected": ".times(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2075,
+          "expected": ".times('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2076,
+          "expected": ".times(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2077,
+          "expected": ".times('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2078,
+          "expected": ".times('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2079,
+          "expected": ".times('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2080,
+          "expected": ".times('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2081,
+          "expected": ".times('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2082,
+          "expected": ".times('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2083,
+          "expected": ".times('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2084,
+          "expected": ".times('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2085,
+          "expected": ".times('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2086,
+          "expected": ".times(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 2087,
+          "expected": ".times('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    },
+    {
+      "method": "toExponential",
+      "passed": 365,
+      "total": 395,
+      "failed": 30,
+      "failures": [
+        {
+          "number": 336,
+          "expected": "null to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 337,
+          "expected": "NaN to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 338,
+          "expected": "'NaN' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 339,
+          "expected": "[] to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 340,
+          "expected": "{} to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 341,
+          "expected": "'' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 342,
+          "expected": "' ' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 343,
+          "expected": "'hello' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 344,
+          "expected": "'\t' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 345,
+          "expected": "new Date to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 346,
+          "expected": "new RegExp to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 347,
+          "expected": "2.01 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 348,
+          "expected": "10.5 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 349,
+          "expected": "'1.1e1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 350,
+          "expected": "true to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 351,
+          "expected": "false to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 352,
+          "expected": "function (){} to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 353,
+          "expected": "Big('3') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 354,
+          "expected": "'0' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 355,
+          "expected": "'1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 356,
+          "expected": "'22' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 357,
+          "expected": "'-0.00' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 358,
+          "expected": "'-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 359,
+          "expected": "-23 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 360,
+          "expected": "1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 361,
+          "expected": "1e9 + 0.1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 362,
+          "expected": "-0.01 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 363,
+          "expected": "'-1e-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 364,
+          "expected": "Infinity to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 365,
+          "expected": "'-Infinity' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        }
+      ]
+    },
+    {
+      "method": "toFixed",
+      "passed": 911,
+      "total": 941,
+      "failed": 30,
+      "failures": [
+        {
+          "number": 895,
+          "expected": "null to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 896,
+          "expected": "NaN to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 897,
+          "expected": "'NaN' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 898,
+          "expected": "[] to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 899,
+          "expected": "{} to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 900,
+          "expected": "'' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 901,
+          "expected": "' ' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 902,
+          "expected": "'hello' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 903,
+          "expected": "'\t' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 904,
+          "expected": "new Date to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 905,
+          "expected": "new RegExp to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 906,
+          "expected": "2.01 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 907,
+          "expected": "10.5 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 908,
+          "expected": "'1.1e1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 909,
+          "expected": "true to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 910,
+          "expected": "false to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 911,
+          "expected": "function (){} to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 912,
+          "expected": "Big('3') to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 913,
+          "expected": "'0' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 914,
+          "expected": "'1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 915,
+          "expected": "'22' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 916,
+          "expected": "'-0.00' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 917,
+          "expected": "'-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 918,
+          "expected": "-23 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 919,
+          "expected": "1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 920,
+          "expected": "1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 921,
+          "expected": "'-0.01' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 922,
+          "expected": "'-1e-1' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 923,
+          "expected": "Infinity to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        },
+        {
+          "number": 924,
+          "expected": "'-Infinity' to raise an fail.",
+          "actual": "RangeError: Invalid decimal places"
+        }
+      ]
+    },
+    {
+      "method": "toNumber",
+      "passed": 60,
+      "total": 65,
+      "failed": 5,
+      "failures": [
+        {
+          "number": 40,
+          "expected": "new Big(n).toNumber() to raise an fail.",
+          "actual": "Error: Imprecise conversion"
+        },
+        {
+          "number": 41,
+          "expected": "new Big(0).toNumber() to raise an fail.",
+          "actual": "TypeError: Invalid value"
+        },
+        {
+          "number": 42,
+          "expected": "new Big(-0).toNumber() to raise an fail.",
+          "actual": "TypeError: Invalid value"
+        },
+        {
+          "number": 43,
+          "expected": "new Big(1).toNumber() to raise an fail.",
+          "actual": "TypeError: Invalid value"
+        },
+        {
+          "number": 44,
+          "expected": "new Big(-1).toNumber() to raise an fail.",
+          "actual": "TypeError: Invalid value"
+        }
+      ]
+    },
+    {
+      "method": "toPrecision",
+      "passed": 393,
+      "total": 425,
+      "failed": 32,
+      "failures": [
+        {
+          "number": 342,
+          "expected": "null to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 343,
+          "expected": "NaN to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 344,
+          "expected": "'NaN' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 345,
+          "expected": "[] to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 346,
+          "expected": "{} to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 347,
+          "expected": "'' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 348,
+          "expected": "' ' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 349,
+          "expected": "'hello' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 350,
+          "expected": "'\t' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 351,
+          "expected": "new Date to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 352,
+          "expected": "new RegExp to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 353,
+          "expected": "2.01 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 354,
+          "expected": "10.5 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 355,
+          "expected": "'1.1e1' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 356,
+          "expected": "true to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 357,
+          "expected": "false to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 358,
+          "expected": "function (){} to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 359,
+          "expected": "Big('3') to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 360,
+          "expected": "'0' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 361,
+          "expected": "'1' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 362,
+          "expected": "'22' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 363,
+          "expected": "'-0.00' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 364,
+          "expected": "'-1' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 365,
+          "expected": "-23 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 366,
+          "expected": "1e9 + 1 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 367,
+          "expected": "1e9 + 0.1 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 368,
+          "expected": "0 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 369,
+          "expected": "'-0' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 370,
+          "expected": "0.9 to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 371,
+          "expected": "'-1e-1' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 372,
+          "expected": "Infinity to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        },
+        {
+          "number": 373,
+          "expected": "'-Infinity' to raise an fail.",
+          "actual": "RangeError: Invalid precision"
+        }
+      ]
+    },
+    {
+      "method": "toString",
+      "passed": 980,
+      "total": 1012,
+      "failed": 32,
+      "failures": [
+        {
+          "number": 969,
+          "expected": "new Big(undefined) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 970,
+          "expected": "new Big(null) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 971,
+          "expected": "new Big(NaN) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 972,
+          "expected": "new Big('NaN') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 973,
+          "expected": "new Big([]) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 974,
+          "expected": "new Big({}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 975,
+          "expected": "new Big('') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 976,
+          "expected": "new Big(' ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 977,
+          "expected": "new Big('hello') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 978,
+          "expected": "new Big('\t') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 979,
+          "expected": "new Big(new Date) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 980,
+          "expected": "new Big(new RegExp) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 981,
+          "expected": "new Big(function () {}) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 982,
+          "expected": "new Big(' 0.1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 983,
+          "expected": "new Big('7.5 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 984,
+          "expected": "new Big(' 0 ') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 985,
+          "expected": "new Big('+1') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 986,
+          "expected": "new Big(' +1.2') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 987,
+          "expected": "new Big('- 99') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 988,
+          "expected": "new Big('9.9.9') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 989,
+          "expected": "new Big('10.1.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 990,
+          "expected": "new Big('0x16') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 991,
+          "expected": "new Big('1e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 992,
+          "expected": "new Big('8 e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 993,
+          "expected": "new Big('77-e') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 994,
+          "expected": "new Big('123e.0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 995,
+          "expected": "new Big('4e1.') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 996,
+          "expected": "new Big('41a') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 997,
+          "expected": "new Big('99ee') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 998,
+          "expected": "new Big('e0') to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 999,
+          "expected": "new Big(Infinity) to raise an fail.",
+          "actual": "Error: Invalid number"
+        },
+        {
+          "number": 1000,
+          "expected": "new Big('-Infinity') to raise an fail.",
+          "actual": "Error: Invalid number"
+        }
+      ]
+    }
+  ],
+  "expectedTotal": 47456,
+  "notExecuted": 1
+}
