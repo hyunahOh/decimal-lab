@@ -5,7 +5,7 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import Reference from "big.js";
-import { loadSource } from "./source-loader.mjs";
+import { loadSource, compilationTarget } from "./source-loader.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const Local = loadSource(path.join(root, "src/big.ts")).default;
@@ -132,7 +132,7 @@ if (workerIndex >= 0) {
       bigJsMinNs: Math.min(...reference), bigJsMaxNs: Math.max(...reference),
       localSamplesNs: local, bigJsSamplesNs: reference };
   }).sort((a, b) => groups.indexOf(a.group) - groups.indexOf(b.group) || a.operation.localeCompare(b.operation));
-  const report = { generatedAt: new Date().toISOString(), node: process.version, v8: process.versions.v8,
+  const report = { generatedAt: new Date().toISOString(), compilationTarget, node: process.version, v8: process.versions.v8,
     os: `${os.platform()} ${os.release()} ${os.arch()}`, cpu: os.cpus()[0]?.model, bigJsVersion: "7.0.1",
     methodology: { independentProcesses: samples, minMeasurementMs: measurementMs, warmupMs,
       operandsPerCase: 32, DP: 20, RM: "HALF_EVEN", statistic: "median ns/op across processes",

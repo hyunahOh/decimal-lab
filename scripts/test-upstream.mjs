@@ -2,29 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
-import ts from "typescript";
 import Reference from "big.js";
+import { loadSource, compilationTarget } from "./source-loader.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const upstream = path.join(root, "test/upstream/big.js");
-const modules = new Map();
-
-// Load the actual source without requiring generated build files or a TS loader.
-function loadSource(filename) {
-  if (modules.has(filename)) return modules.get(filename).exports;
-  const module = { exports: {} };
-  modules.set(filename, module);
-  const { outputText } = ts.transpileModule(fs.readFileSync(filename, "utf8"), {
-    compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS },
-    fileName: filename,
-  });
-  const evaluate = vm.runInThisContext(`(function(require, module, exports) {\n${outputText}\n})`, { filename });
-  evaluate(specifier => {
-    if (!specifier.startsWith(".")) throw new Error(`Unexpected source import: ${specifier}`);
-    return loadSource(path.resolve(path.dirname(filename), `${specifier}.ts`));
-  }, module, module.exports);
-  return module.exports;
-}
 
 const implementation = process.argv.includes("--reference") ? "big.js 7.0.1" : "decimal-lab";
 const Constructor = implementation === "decimal-lab" ? loadSource(path.join(root, "src/big.ts")).default : Reference;
@@ -74,6 +56,7 @@ for (const method of methods) {
 
 const summary = {
   implementation,
+  compilationTarget: implementation === "decimal-lab" ? compilationTarget : null,
   upstreamCommit: "e19cc83cb965bdef18cb31423d81f60140c9e7be",
   passed: results.reduce((sum, item) => sum + item.passed, 0),
   total: results.reduce((sum, item) => sum + item.total, 0),

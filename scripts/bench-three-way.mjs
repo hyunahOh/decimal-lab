@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import Reference from "big.js";
-import { loadSource } from "./source-loader.mjs";
+import { loadSource, compilationTarget } from "./source-loader.mjs";
 import { groups as allGroups, operationNames, inputs, bigCases, decimalCases } from "./benchmark-workloads.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
@@ -146,7 +146,7 @@ if (process.argv.includes("--preflight")) {
     benchmarkHash.update(name).update(fs.readFileSync(path.join(root, "scripts", name)));
   }
   const packageVersion = library => JSON.parse(fs.readFileSync(path.join(root, "node_modules", library, "package.json"), "utf8")).version;
-  const report = { startedAt, completedAt: new Date().toISOString(), node: process.version, v8: process.versions.v8,
+  const report = { startedAt, completedAt: new Date().toISOString(), compilationTarget, node: process.version, v8: process.versions.v8,
     cpu: os.cpus()[0]?.model, os: `${os.platform()} ${os.release()} ${os.arch()}`, sourceSha256: sourceHash.digest("hex"), benchmarkSha256: benchmarkHash.digest("hex"),
     versions: { "big.js": packageVersion("big.js"), "decimal.js": packageVersion("decimal.js") },
     methodology: { rounds, targetMinutesPerLibrary: minutes, actualMeasuredSeconds: totals,

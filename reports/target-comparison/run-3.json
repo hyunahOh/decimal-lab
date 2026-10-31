@@ -1,0 +1,482 @@
+[
+  {
+    "group": "small-6-digit",
+    "operation": "construct",
+    "ES2022": 130.81734042697482,
+    "ES2020": 134.35828857421876
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "plus",
+    "ES2020": 52.43937266956676,
+    "ES2022": 52.48370361328125
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "minus",
+    "ES2022": 54.502245221819194,
+    "ES2020": 60.77970725611637
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "times",
+    "ES2020": 74.25082397460938,
+    "ES2022": 74.88837260584677
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "div",
+    "ES2022": 193.163449605306,
+    "ES2020": 192.83412170410156
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "mod",
+    "ES2020": 149.82013727003527,
+    "ES2022": 151.0394523374496
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "sqrt",
+    "ES2022": 1299.0736462823277,
+    "ES2020": 1294.1326441271551
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "pow3",
+    "ES2020": 792.8559875488281,
+    "ES2022": 869.2044990007267
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "round2",
+    "ES2022": 11.145450738760141,
+    "ES2020": 11.315315540020283
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "prec10",
+    "ES2020": 26.506439208984375,
+    "ES2022": 33.13218950544085
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "cmp",
+    "ES2022": 14.746014404296876,
+    "ES2020": 14.732551383972169
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "toString",
+    "ES2020": 62.98047947239231,
+    "ES2022": 72.93784427642822
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "toFixed2",
+    "ES2022": 78.56194966634115,
+    "ES2020": 81.86994062151227
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "toPrecision10",
+    "ES2020": 113.10220336914062,
+    "ES2022": 129.65421549479166
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "toExponential8",
+    "ES2022": 130.91430489676338,
+    "ES2020": 127.33911471896701
+  },
+  {
+    "group": "small-6-digit",
+    "operation": "endToEnd",
+    "ES2020": 1035.9073215060764,
+    "ES2022": 1038.8200005425347
+  },
+  {
+    "group": "small",
+    "operation": "construct",
+    "ES2022": 150.12039873676915,
+    "ES2020": 151.976560531124
+  },
+  {
+    "group": "small",
+    "operation": "plus",
+    "ES2020": 62.38786027238176,
+    "ES2022": 60.8256153307463
+  },
+  {
+    "group": "small",
+    "operation": "minus",
+    "ES2022": 66.71829398018973,
+    "ES2020": 76.73568522135416
+  },
+  {
+    "group": "small",
+    "operation": "times",
+    "ES2020": 87.53327094184027,
+    "ES2022": 89.10824937086839
+  },
+  {
+    "group": "small",
+    "operation": "div",
+    "ES2022": 206.20063848080844,
+    "ES2020": 206.04408065132472
+  },
+  {
+    "group": "small",
+    "operation": "mod",
+    "ES2020": 177.57308490459735,
+    "ES2022": 179.5765826885517
+  },
+  {
+    "group": "small",
+    "operation": "sqrt",
+    "ES2022": 1275.7996699892242,
+    "ES2020": 1278.410055226293
+  },
+  {
+    "group": "small",
+    "operation": "pow3",
+    "ES2020": 868.1885653409091,
+    "ES2022": 851.2586669921875
+  },
+  {
+    "group": "small",
+    "operation": "round2",
+    "ES2022": 78.01441650390625,
+    "ES2020": 79.70051522090517
+  },
+  {
+    "group": "small",
+    "operation": "prec10",
+    "ES2020": 73.30564785003662,
+    "ES2022": 76.74501139322916
+  },
+  {
+    "group": "small",
+    "operation": "cmp",
+    "ES2022": 13.687981741768974,
+    "ES2020": 13.695882888067336
+  },
+  {
+    "group": "small",
+    "operation": "toString",
+    "ES2020": 61.23937586734169,
+    "ES2022": 68.99025950712316
+  },
+  {
+    "group": "small",
+    "operation": "toFixed2",
+    "ES2022": 147.74942588806152,
+    "ES2020": 155.15375162760418
+  },
+  {
+    "group": "small",
+    "operation": "toPrecision10",
+    "ES2020": 161.9244321625808,
+    "ES2022": 161.10782386516703
+  },
+  {
+    "group": "small",
+    "operation": "toExponential8",
+    "ES2022": 173.41802074291087,
+    "ES2020": 176.90218646709735
+  },
+  {
+    "group": "small",
+    "operation": "endToEnd",
+    "ES2020": 1122.246641216856,
+    "ES2022": 1095.075439453125
+  },
+  {
+    "group": "small-promotion",
+    "operation": "construct",
+    "ES2022": 165.1138174874442,
+    "ES2020": 163.9082750592913
+  },
+  {
+    "group": "small-promotion",
+    "operation": "plus",
+    "ES2020": 72.53217506408691,
+    "ES2022": 71.947096824646
+  },
+  {
+    "group": "small-promotion",
+    "operation": "minus",
+    "ES2022": 34.588327295639935,
+    "ES2020": 38.0479741250315
+  },
+  {
+    "group": "small-promotion",
+    "operation": "times",
+    "ES2020": 85.61461724175348,
+    "ES2022": 84.58396366664341
+  },
+  {
+    "group": "small-promotion",
+    "operation": "div",
+    "ES2022": 306.5685628255208,
+    "ES2020": 307.2323404947917
+  },
+  {
+    "group": "small-promotion",
+    "operation": "mod",
+    "ES2020": 294.2554244995117,
+    "ES2022": 297.09683325982866
+  },
+  {
+    "group": "small-promotion",
+    "operation": "sqrt",
+    "ES2022": 1392.8448893229167,
+    "ES2020": 1394.7753363715278
+  },
+  {
+    "group": "small-promotion",
+    "operation": "pow3",
+    "ES2020": 1040.0356852213542,
+    "ES2022": 1026.9147813585068
+  },
+  {
+    "group": "small-promotion",
+    "operation": "round2",
+    "ES2022": 17.150785109576056,
+    "ES2020": 22.460338005652794
+  },
+  {
+    "group": "small-promotion",
+    "operation": "prec10",
+    "ES2020": 309.68763427734376,
+    "ES2022": 296.0697297127016
+  },
+  {
+    "group": "small-promotion",
+    "operation": "cmp",
+    "ES2022": 11.19606296832745,
+    "ES2020": 11.273720521193285
+  },
+  {
+    "group": "small-promotion",
+    "operation": "toString",
+    "ES2020": 56.45418948218936,
+    "ES2022": 66.4413827078683
+  },
+  {
+    "group": "small-promotion",
+    "operation": "toFixed2",
+    "ES2022": 80.68053988752693,
+    "ES2020": 82.62039293561664
+  },
+  {
+    "group": "small-promotion",
+    "operation": "toPrecision10",
+    "ES2020": 431.18330522017044,
+    "ES2022": 415.259521484375
+  },
+  {
+    "group": "small-promotion",
+    "operation": "toExponential8",
+    "ES2022": 376.1391162109375,
+    "ES2020": 444.9828694661458
+  },
+  {
+    "group": "small-promotion",
+    "operation": "endToEnd",
+    "ES2020": 1301.8307347790949,
+    "ES2022": 1171.8311767578125
+  },
+  {
+    "group": "boundary",
+    "operation": "construct",
+    "ES2022": 174.37989185474538,
+    "ES2020": 177.24139639047476
+  },
+  {
+    "group": "boundary",
+    "operation": "plus",
+    "ES2020": 143.70584106445312,
+    "ES2022": 156.60281778971355
+  },
+  {
+    "group": "boundary",
+    "operation": "minus",
+    "ES2022": 170.04328974971065,
+    "ES2020": 167.80817522321428
+  },
+  {
+    "group": "boundary",
+    "operation": "times",
+    "ES2020": 83.92174530029297,
+    "ES2022": 82.3977791922433
+  },
+  {
+    "group": "boundary",
+    "operation": "div",
+    "ES2022": 219.9445568266369,
+    "ES2020": 218.94666980561755
+  },
+  {
+    "group": "boundary",
+    "operation": "mod",
+    "ES2020": 276.9521053538603,
+    "ES2022": 281.9417317708333
+  },
+  {
+    "group": "boundary",
+    "operation": "sqrt",
+    "ES2022": 1444.3899676983174,
+    "ES2020": 1447.345440204327
+  },
+  {
+    "group": "boundary",
+    "operation": "pow3",
+    "ES2020": 910.2759021577381,
+    "ES2022": 906.9422549293155
+  },
+  {
+    "group": "boundary",
+    "operation": "round2",
+    "ES2022": 122.14526527806332,
+    "ES2020": 123.93174784892314
+  },
+  {
+    "group": "boundary",
+    "operation": "prec10",
+    "ES2020": 251.10605600717906,
+    "ES2022": 246.5802933542352
+  },
+  {
+    "group": "boundary",
+    "operation": "cmp",
+    "ES2022": 60.74172491776316,
+    "ES2020": 60.42892054507607
+  },
+  {
+    "group": "boundary",
+    "operation": "toString",
+    "ES2020": 86.83541078920717,
+    "ES2022": 97.11705144246419
+  },
+  {
+    "group": "boundary",
+    "operation": "toFixed2",
+    "ES2022": 249.42566577808276,
+    "ES2020": 255.73871527777777
+  },
+  {
+    "group": "boundary",
+    "operation": "toPrecision10",
+    "ES2020": 375.697021484375,
+    "ES2022": 364.10444993239184
+  },
+  {
+    "group": "boundary",
+    "operation": "toExponential8",
+    "ES2022": 345.8498761212384,
+    "ES2020": 356.3709716796875
+  },
+  {
+    "group": "boundary",
+    "operation": "endToEnd",
+    "ES2020": 1285.8276198814656,
+    "ES2022": 1290.4495049838363
+  },
+  {
+    "group": "30-digit",
+    "operation": "construct",
+    "ES2022": 191.74840799967447,
+    "ES2020": 192.15276845296225
+  },
+  {
+    "group": "30-digit",
+    "operation": "plus",
+    "ES2020": 184.67335693359374,
+    "ES2022": 184.33868896484375
+  },
+  {
+    "group": "30-digit",
+    "operation": "minus",
+    "ES2022": 201.4313805621603,
+    "ES2020": 199.6192467730978
+  },
+  {
+    "group": "30-digit",
+    "operation": "times",
+    "ES2020": 85.89850531684027,
+    "ES2022": 80.76626060748923
+  },
+  {
+    "group": "30-digit",
+    "operation": "div",
+    "ES2022": 384.2459716796875,
+    "ES2020": 382.24367268880206
+  },
+  {
+    "group": "30-digit",
+    "operation": "mod",
+    "ES2020": 278.6541563091856,
+    "ES2022": 282.27897505326706
+  },
+  {
+    "group": "30-digit",
+    "operation": "sqrt",
+    "ES2022": 1480.61203125,
+    "ES2020": 1487.32591796875
+  },
+  {
+    "group": "30-digit",
+    "operation": "pow3",
+    "ES2020": 1467.81744140625,
+    "ES2022": 1465.02765625
+  },
+  {
+    "group": "30-digit",
+    "operation": "round2",
+    "ES2022": 71.20098044655539,
+    "ES2020": 79.8272757694639
+  },
+  {
+    "group": "30-digit",
+    "operation": "prec10",
+    "ES2020": 450.1517275855655,
+    "ES2022": 450.5644298735119
+  },
+  {
+    "group": "30-digit",
+    "operation": "cmp",
+    "ES2022": 74.91614064862651,
+    "ES2020": 74.59722211284023
+  },
+  {
+    "group": "30-digit",
+    "operation": "toString",
+    "ES2020": 148.45948643838204,
+    "ES2022": 164.3384246826172
+  },
+  {
+    "group": "30-digit",
+    "operation": "toFixed2",
+    "ES2022": 226.0691382998512,
+    "ES2020": 225.0759771437872
+  },
+  {
+    "group": "30-digit",
+    "operation": "toPrecision10",
+    "ES2020": 529.0791782924107,
+    "ES2022": 529.8703055245536
+  },
+  {
+    "group": "30-digit",
+    "operation": "toExponential8",
+    "ES2022": 497.92590002111484,
+    "ES2020": 500.7692607157939
+  },
+  {
+    "group": "30-digit",
+    "operation": "endToEnd",
+    "ES2020": 1424.236572265625,
+    "ES2022": 1431.858173076923
+  }
+]
