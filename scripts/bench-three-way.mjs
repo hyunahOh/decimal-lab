@@ -7,7 +7,7 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import Reference from "big.js";
 import { loadSource, compilationTarget } from "./source-loader.mjs";
-import { groups as allGroups, operationNames, inputs, bigCases, decimalCases } from "./benchmark-workloads.mjs";
+import { groups as allGroups, operationNames, inputs, bigCases } from "./benchmark-workloads.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const Local = loadSource(path.join(root, "src/big.ts")).default;
@@ -16,7 +16,7 @@ const groups = argument("--groups", allGroups.join(",")).split(",");
 if (groups.some(group => !allGroups.includes(group)) || new Set(groups).size !== groups.length) throw new Error("Invalid groups");
 const baselinePath = argument("--baseline", undefined);
 const Baseline = baselinePath ? loadSource(path.resolve(baselinePath, "big.ts")).default : undefined;
-const libraries = [...(Baseline ? ["before"] : []), "decimal-lab", "big.js", "decimal.js"];
+const libraries = [...(Baseline ? ["before"] : []), "decimal-lab", "big.js"];
 const caseCount = groups.length * operationNames.length;
 const minutes = Number(argument("--minutes", "10"));
 const rounds = Number(argument("--rounds", "5"));
@@ -53,10 +53,10 @@ function measure(operation) {
 }
 
 function workloads(group) {
-  const pairs = inputs(group), decimal = decimalCases(pairs);
-  return { pairs, settings: decimal.settings, cases: {
+  const pairs = inputs(group);
+  return { pairs, settings: { DP: 20, RM: "HALF_EVEN" }, cases: {
     ...(Baseline ? { before: bigCases(Baseline, pairs) } : {}),
-    "decimal-lab": bigCases(Local, pairs), "big.js": bigCases(Reference, pairs), "decimal.js": decimal.cases,
+    "decimal-lab": bigCases(Local, pairs), "big.js": bigCases(Reference, pairs),
   } };
 }
 
@@ -148,13 +148,12 @@ if (process.argv.includes("--preflight")) {
   const packageVersion = library => JSON.parse(fs.readFileSync(path.join(root, "node_modules", library, "package.json"), "utf8")).version;
   const report = { startedAt, completedAt: new Date().toISOString(), compilationTarget, node: process.version, v8: process.versions.v8,
     cpu: os.cpus()[0]?.model, os: `${os.platform()} ${os.release()} ${os.arch()}`, sourceSha256: sourceHash.digest("hex"), benchmarkSha256: benchmarkHash.digest("hex"),
-    versions: { "big.js": packageVersion("big.js"), "decimal.js": packageVersion("decimal.js") },
+    versions: { "big.js": packageVersion("big.js") },
     methodology: { rounds, targetMinutesPerLibrary: minutes, actualMeasuredSeconds: totals,
       cases: caseCount, groups, ...(baselinePath ? { baselinePath } : {}), operandPairsPerCase: 32, minMeasurementMsPerRoundAndCase: measurementMs, warmupMsPerCase: 20,
       sampling: "equal time per case/library; median across independent Node processes; alternating group/operation order and rotating library order",
       allocation: "all outputs escape through a 32-slot sink, natural GC included; no forced GC; memory not benchmarked",
       rounding: "HALF_EVEN; division/sqrt final output 20 decimal places; exact +/-/*/cube",
-      decimalAdaptation: "operation-specific cloned constructors; exact precision sufficient for all digits; div/sqrt/chain precision sized for integer digits + 20 decimal places + 10 guard digits; toDP(20) included in timing",
       scope: "fixed mixed-sign/scale inputs on Node, no browser or arbitrary-input correctness guarantee from benchmark preflight" },
     preflight: JSON.parse(fs.readFileSync(path.join(directory, "preflight.json"), "utf8")), rows };
   fs.writeFileSync(path.join(directory, "comparison.json"), JSON.stringify(report, null, 2) + "\n");
